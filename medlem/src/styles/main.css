@@ -166,6 +166,52 @@ CONTACT SECTION STYLING
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .board-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .board-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 640px;
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .member-info {
+    width: 50%;
+    text-align: left;
+  }
+  
+  .member-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--primary-color);
+  }
+  
+  .member-info p {
+    margin: 4px 0;
+  }
+  
+  .member-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-top: 5px;
+    display: inline-block;
+    font-size: small;
+  }
+}
+
 /*
 HEADER STYLING
 */
