@@ -1,27 +1,39 @@
 import React, { useState, useContext } from 'react';
 import { MembershipContext } from '../context/MembershipContext';
-import { useNavigate } from 'react-router-dom';
 
 const MemberForm = () => {
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const { addMember } = useContext(MembershipContext);
-  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const { addMember, status } = useContext(MembershipContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addMember({ name, email });
-    navigate('/members');
+    setIsSubmitting(true);
+    addMember({ "first_name":firstName, "last_name":lastName, email });
+    setIsSubmitting(false);
   };
 
   return (
     <form onSubmit={handleSubmit}>
+    <div>
+      <label>First name:</label>
+      <input
+        type="text"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        required
+      />
+    </div>
       <div>
-        <label>Name:</label>
+        <label>Last name:</label>
         <input
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          required
         />
       </div>
       <div>
@@ -30,9 +42,11 @@ const MemberForm = () => {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
       </div>
-      <button type="submit">Become Member</button>
+      {status.message && <div style={{ color: status.color }}>{status.message}</div>}
+      <button type="submit" disabled={isSubmitting}>Become Member</button>
     </form>
   );
 };

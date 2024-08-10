@@ -1,15 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
+      <h1>LiTHe Hax</h1>
       <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/members">Members</Link></li>
-          <li><Link to="/new-member">New Member</Link></li>
-        </ul>
+        <Link to="/" className="button">Home</Link>
+        <Link to="/new-member" className="button">Member</Link>
       </nav>
     </header>
   );
