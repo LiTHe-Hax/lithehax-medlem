@@ -167,6 +167,14 @@ CONTACT SECTION STYLING
 }
 
 @media (max-width: 768px) {
+  .about-section {
+    padding: 20px;
+    background: var(--section-bg-color);
+    margin: 0px;
+    border-radius: 8px;
+    color: var(--text-color);
+  }
+  
   .board-members {
     display: flex;
     flex-wrap: wrap;

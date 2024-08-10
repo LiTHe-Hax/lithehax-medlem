@@ -24,19 +24,19 @@ const Home = () => {
             alt="Isak Horvath"
           />
           <div className="member-info">
-            <h3>Isak Horvath @xecutive_1337</h3>
+            <h3>Isak Horvath @Xecutive_1337</h3>
             <p>Chairman</p>
             <a href="mailto:isak.horvath@d-sektionen.se">isak.horvath@d-sektionen.se</a>
           </div>
         </div>
         <div className="board-member">
           <img
-            src="/placeholder.png"
+            src="/cashier.jpg"
             className="profile-img"
             alt="Lukas Wandel"
           />
           <div className="member-info">
-            <h3>Lukas Wandel</h3>
+            <h3>Lukas Wandel @DominoFives</h3>
             <p>Cashier</p>
             <a href="#">(mail coming soon)</a>
           </div>
@@ -48,7 +48,7 @@ const Home = () => {
             alt="Viktor Holta"
           />
           <div className="member-info">
-            <h3>Viktor Holta @xXhackermanXx</h3>
+            <h3>Viktor Holta @Parslie</h3>
             <p>Secretary</p>
             <a href="#">(mail coming soon)</a>
           </div>
