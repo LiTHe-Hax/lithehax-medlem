@@ -38,7 +38,7 @@ const Home = () => {
           <div className="member-info">
             <h3>Lukas Wandel</h3>
             <p>Cashier</p>
-            <a href="#">(mail comming soon)</a>
+            <a href="#">(mail coming soon)</a>
           </div>
         </div>
         <div className="board-member">
@@ -50,7 +50,7 @@ const Home = () => {
           <div className="member-info">
             <h3>Viktor Holta @xXhackermanXx</h3>
             <p>Secretary</p>
-            <a href="#">(mail comming soon)</a>
+            <a href="#">(mail coming soon)</a>
           </div>
         </div>
         <div className="board-member">
@@ -62,7 +62,7 @@ const Home = () => {
           <div className="member-info">
             <h3>Adam Bohman @Whiibie</h3>
             <p>Accountant</p>
-            <a href="#">(mail comming soon)</a>
+            <a href="#">(mail coming soon)</a>
           </div>
         </div>
       </div>
