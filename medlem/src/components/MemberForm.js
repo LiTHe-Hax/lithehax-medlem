@@ -54,7 +54,6 @@ const MemberForm = () => {
           type="checkbox"
           defaultChecked={isStudent}
           onChange={(e) => setIsStudent(e.target.checked)}
-          required
         />
       </div>
       {status.message && <div style={{ color: status.color }}>{status.message}</div>}
