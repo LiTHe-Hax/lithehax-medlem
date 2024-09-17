@@ -77,6 +77,13 @@ const Home = () => {
       <ul>
         <li>
           <p>
+            <a href="/Kallelse-Extrainsatt-Arsmote.pdf" download="Kallelse-Extrainsatt-Årsmöte">
+              <i className="link">Kallelse-Extrainsatt-Årsmöte.pdf</i>
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
             <a href="/LiTHe-Hax-Stadgar-Reviderade.pdf" download="LiTHe-Hax-Stadgar">
               <i className="link">LiTHe-Hax-Stadgar.pdf</i>
             </a>
