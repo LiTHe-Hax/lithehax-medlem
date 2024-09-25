@@ -1,13 +1,29 @@
+import { useState } from 'react';
+import { createMember } from '../api/member';
+
 function NewMember() {
-  const createMember = (e) => {
+  // TODO: add feedback for becoming a member
+  const [successMsg, setSuccessMsg] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  const onSubmit = (e) => {
     e.preventDefault();
+
     const data = {
-      'first_name': e.target.firstName.value,
-      'last_name': e.target.lastName.value,
+      'firstName': e.target.firstName.value,
+      'lastName': e.target.lastName.value,
       'email': e.target.email.value,
-      'is_student': e.target.studentMembership.checked,
+      'isStudent': e.target.studentMembership.checked,
     };
-    alert('THIS HAS NOT BEEN REIMPLEMENTED YET\n\n' + JSON.stringify(data));
+
+    createMember(data).then(resp => {
+      setSuccessMsg('Successfully applied to become a member!');
+      setErrorMsg(null);
+    }).catch(({ response: resp }) => {
+      // TODO: improve error (e.g. highlight invalid fields)
+      setSuccessMsg(null);
+      setErrorMsg(`${resp.status} ${resp.statusText}`);
+    });
   };
 
   return (
@@ -16,7 +32,7 @@ function NewMember() {
       <p>
         Join LiTHe Hax and become a member! As a member, you'll gain access to exclusive events, resources, and updates about our organization's activities. Once your membership is approved by our board, we will contact you with further details.
       </p>
-      <form onSubmit={createMember}>
+      <form onSubmit={onSubmit}>
         <label htmlFor='firstName'>First name:</label>
         <input id='firstName' type='text' required />
         <label htmlFor='lastName'>Last name:</label>
@@ -27,6 +43,8 @@ function NewMember() {
         <input id='studentMembership' type='checkbox' defaultChecked />
         <button type='submit'>Become member</button>
       </form>
+      {successMsg && <p>{successMsg}</p>}
+      {errorMsg && <p>{errorMsg}</p>}
     </>
   );
 }
