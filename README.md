@@ -1,2 +1,2 @@
 # lithehax-medlem
-the frontend for lithehax membership portal
+The frontend for the LiTHe Hax membership portal.
