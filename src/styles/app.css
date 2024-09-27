@@ -1,0 +1,55 @@
+.app {
+  min-height: 100%;
+}
+
+.app > header {
+  padding: 2rem;
+  background-color: var(--header-bg);
+  /* background-image: linear-gradient(45deg, var(--header-bg), var(--header-fg)); */
+  color: var(--header-fg);
+}
+
+.app > header .title {
+  display: block;
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.app > header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* TODO: buttons could be improved, maybe outline them instead of fill them? */
+.app > header nav a {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  background-color: var(--nav-button-bg);
+  color: var(--nav-button-fg);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 150ms ease-out;
+  transform: scale(1);
+  user-select: none;
+}
+
+.app > header nav a:hover {
+  background-color: var(--nav-button-hover-bg);
+  color: var(--nav-button-hover-fg);
+  transform: scale(1.1);
+}
+
+.app > main > section {
+  margin: 3rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--section-bg);
+  color: var(--section-fg);
+}
+
+/* Ensures that there are no unnecessarily large gaps at top and bottom. */
+.app > main > section > *:first-child { margin-top: 0; }
+.app > main > section > *:last-child { margin-bottom: 0; }

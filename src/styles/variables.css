@@ -1,0 +1,22 @@
+:root {
+  --bg: #121212;
+  --fg: #ffffff;
+
+  --header-fg: #3f3;
+  --header-bg: #020;
+
+  --nav-button-bg: #121212;
+  --nav-button-fg: #3f3;
+  --nav-button-hover-bg: var(--nav-button-fg);
+  --nav-button-hover-fg: var(--nav-button-bg);
+
+  --section-bg: #1a1a1a;
+  --section-fg: #ffffff;
+
+  --heading-color: #3f3;
+  --link-bg: #333;
+  --link-fg: #3f3;
+  --link-hover-fg: #aaffbf;
+
+  --input-fg: #3f3;
+}

@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './app';
 import Home from './pages/home';
 import NewMember from './pages/new-member';
-//import './styles/main.css';
+import Test from './pages/test';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: 'new-member',
         element: <NewMember />
+      },
+      {
+        path: 'test',
+        element: <Test />
       }
     ]
   }

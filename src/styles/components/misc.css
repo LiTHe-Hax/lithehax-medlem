@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--link-fg);
+  text-decoration: none;
+  transition: color 150ms ease-out;
+}
+
+a:hover {
+  color: var(--link-hover-fg);
+}
