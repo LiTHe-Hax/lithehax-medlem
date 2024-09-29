@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 type OptionType = { label: string, value: any };
 
 interface DropdownProps {
+  className?: string,
   id?: string,
   placeholder?: string,
   disabled?: boolean,
@@ -11,7 +12,7 @@ interface DropdownProps {
   onValueUpdate?: (value: any) => void,
 };
 
-function DropdownInput({ id, placeholder, disabled = false, options, initialOptionIdx, onValueUpdate }: DropdownProps) {
+function DropdownInput({ className, id, placeholder, disabled = false, options, initialOptionIdx, onValueUpdate }: DropdownProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedIdx, setSelectedIdx] = useState<number | undefined>(initialOptionIdx);
   // TODO: error message/highlighting
@@ -129,7 +130,7 @@ function DropdownInput({ id, placeholder, disabled = false, options, initialOpti
   };
 
   return (
-    <div className='dropdown-input' ref={ref}>
+    <div className={`dropdown-input ${className || ''}`} ref={ref}>
       <button
         id={id}
         type='button'

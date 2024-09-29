@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createMember } from '../api/member';
 import DropdownInput from '../components/dropdown-input';
+import { AxiosError } from 'axios';
 
 import '../styles/pages/new-member.css';
 
@@ -16,17 +17,27 @@ interface CreateMemberFormElement extends HTMLFormElement {
 }
 
 function NewMember() {
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
-  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [firstNameError, setFirstNameError] = useState<string | null>(null);
+  const [lastNameError, setLastNameError] = useState<string | null>(null);
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [isStudentError, setIsStudentError] = useState<string | null>(null);
 
   const onSubmit = (e: React.FormEvent<CreateMemberFormElement>) => {
     e.preventDefault();
 
     if (e.currentTarget.elements.isStudent.value === '') {
-      // TODO: improve error (e.g. highlight invalid fields)
-      setErrorMsg('Please set your membership type');
+      setIsStudentError('Please set your membership type');
       return;
     }
+
+    setSuccessMsg(null);
+    setFirstNameError(null);
+    setLastNameError(null);
+    setEmailError(null);
+    setIsStudentError(null);
+    setIsSubmitting(true);
 
     const data = {
       'firstName': e.currentTarget.elements.firstName.value,
@@ -35,19 +46,33 @@ function NewMember() {
       'isStudent': e.currentTarget.elements.isStudent.value === 'true',
     };
 
-    // TODO: disable submission if already sending
-    createMember(data).then(resp => {
-      setSuccessMsg('Successfully applied to become a member!');
-      setErrorMsg(null);
-      // TODO: reset form
-    }).catch(({ response: resp }) => {
-      // TODO: improve error (e.g. highlight invalid fields)
-      // TODO: if cannot reach server, no resp is given, so this needs to be changed
-      setSuccessMsg(null);
-      setErrorMsg(`${resp.status} ${resp.statusText}`);
+    createMember(data).then((resp) => {
+      setSuccessMsg('Successfully applied for a membership');
+      setIsSubmitting(false);
+    }).catch((err: AxiosError) => {
+      let data = err.response?.data as {};
+      if ('first_name' in data) {
+        let main_error = (data.first_name as string[])[0];
+        setFirstNameError(main_error);
+      }
+      if ('last_name' in data) {
+        let main_error = (data.last_name as string[])[0];
+        setLastNameError(main_error);
+      }
+      if ('email' in data) {
+        let main_error = (data.email as string[])[0];
+        setEmailError(main_error);
+      }
+      if ('is_student' in data) {
+        let main_error = (data.is_student as string[])[0];
+        setIsStudentError(main_error);
+      }
+      setIsSubmitting(false);
     });
   };
 
+  // TODO: show user that it is submitting
+  // TODO: display error messages as tooltips
   return (
     <section className='thin'>
       <h1>Become a member</h1>
@@ -58,23 +83,38 @@ function NewMember() {
         <div className='field-row'>
           <div className='field'>
             <label htmlFor='firstName'>First name:</label>
-            <input id='firstName' type='text' required />
+            <input
+              className={firstNameError !== null ? 'error' : undefined}
+              id='firstName'
+              type='text'
+              required
+            />
           </div>
 
           <div className='field'>
             <label htmlFor='lastName'>Last name:</label>
-            <input id='lastName' type='text' required />
+            <input
+              className={lastNameError !== null ? 'error' : undefined} id='lastName'
+              type='text'
+              required
+            />
           </div>
         </div>
 
         <div className='field'>
           <label htmlFor='email'>Email:</label>
-          <input id='email' type='email' required />
+          <input
+            className={emailError !== null ? 'error' : undefined}
+            id='email'
+            type='email'
+            required
+          />
         </div>
 
         <div className='field'>
           <label htmlFor='isStudent'>Membership type:</label>
           <DropdownInput
+            className={isStudentError !== null ? 'error' : undefined}
             id='isStudent'
             placeholder='Please select a membership type'
             options={[
@@ -84,10 +124,10 @@ function NewMember() {
           />
         </div>
 
-        <button type='submit'>Become member</button>
+        <button type='submit' disabled={isSubmitting}>Become member</button>
       </form>
+
       {successMsg && <p>{successMsg}</p>}
-      {errorMsg && <p>{errorMsg}</p>}
     </section>
   );
 }

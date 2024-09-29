@@ -96,3 +96,8 @@ input {
 .dropdown-input .menu-item.selected {
   background-color: #ffffff0d;
 }
+
+input.error,
+.dropdown-input.error button {
+  border-color: var(--input-error-color);
+}
