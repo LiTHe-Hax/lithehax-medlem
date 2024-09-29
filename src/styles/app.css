@@ -2,10 +2,10 @@
   min-height: 100%;
 }
 
+/* TODO: would be cool to have subtle matrix rain in background */
 .app > header {
   padding: 2rem;
   background-color: var(--header-bg);
-  /* background-image: linear-gradient(45deg, var(--header-bg), var(--header-fg)); */
   color: var(--header-fg);
 }
 
@@ -23,9 +23,9 @@
   gap: 1rem;
 }
 
-/* TODO: buttons could be improved, maybe outline them instead of fill them? */
 .app > header nav a {
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 0.15rem solid var(--nav-button-border);
   border-radius: 0.5rem;
   background-color: var(--nav-button-bg);
   color: var(--nav-button-fg);
@@ -34,6 +34,7 @@
   transition: all 150ms ease-out;
   transform: scale(1);
   user-select: none;
+  line-height: 1;
 }
 
 .app > header nav a:hover {

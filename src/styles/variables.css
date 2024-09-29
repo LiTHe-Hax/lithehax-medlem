@@ -5,10 +5,11 @@
   --header-fg: #3f3;
   --header-bg: #020;
 
-  --nav-button-bg: #121212;
-  --nav-button-fg: #3f3;
-  --nav-button-hover-bg: var(--nav-button-fg);
-  --nav-button-hover-fg: var(--nav-button-bg);
+  --nav-button-border: #3f3;
+  --nav-button-bg: #3f3;
+  --nav-button-fg: #121212;
+  --nav-button-hover-bg: transparent;
+  --nav-button-hover-fg: #3f3;
 
   --section-bg: #1a1a1a;
   --section-fg: #ffffff;
