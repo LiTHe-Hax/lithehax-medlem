@@ -9,7 +9,10 @@ const instance = axios.create({
   headers: { 'Content-Type': 'application/json' },
 });
 
-function request(url, method, data) {
+type Method = 'get' | 'post' | 'put' | 'patch' | 'delete' | 'head' | 'options';
+type Json = [any] | { [key: string]: any };
+
+function request(url: string, method: Method, data?: Json) {
   return instance.request({
     url: url,
     method: method,

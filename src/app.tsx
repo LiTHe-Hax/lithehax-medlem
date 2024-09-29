@@ -2,8 +2,8 @@ import { Link, Outlet } from 'react-router-dom';
 
 import './styles/variables.css';
 import './styles/app.css';
-import './styles/components/inputs.css';
-import './styles/components/misc.css';
+import './styles/inputs.css';
+import './styles/misc.css';
 
 function App() {
   return (

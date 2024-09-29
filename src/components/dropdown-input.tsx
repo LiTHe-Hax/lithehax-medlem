@@ -1,17 +1,30 @@
 import { useEffect, useRef, useState } from 'react';
 
-function DropdownInput({ id, placeholder, disabled, initialOptionIdx, onValueUpdate, options }) {
-  const [selected, setSelected] = useState(initialOptionIdx || initialOptionIdx === 0 ? options[initialOptionIdx] : null);
-  const [isOpen, setIsOpen] = useState(false);
+type OptionType = { label: string, value: any };
+
+interface DropdownProps {
+  id?: string,
+  placeholder?: string,
+  disabled?: boolean,
+  options: [OptionType, ...OptionType[]],
+  initialOptionIdx?: number,
+  onValueUpdate?: (value: any) => void,
+};
+
+function DropdownInput({ id, placeholder, disabled = false, options, initialOptionIdx, onValueUpdate }: DropdownProps) {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [selected, setSelected] = useState<OptionType | null>(
+    initialOptionIdx !== undefined ? options[initialOptionIdx] : null
+  );
   // TODO: error message/highlighting
   //const [error, setError] = useState(null);
 
-  const ref = useRef(null);
-  const buttonRef = useRef(null);
-  const ulRef = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const ulRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    if (onValueUpdate !== undefined && selected) {
+    if (onValueUpdate !== undefined && selected !== null) {
       onValueUpdate(selected.value);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -20,14 +33,14 @@ function DropdownInput({ id, placeholder, disabled, initialOptionIdx, onValueUpd
   useEffect(() => {
     if (isOpen && ulRef.current && selected) {
       const optionIdx = options.indexOf(selected);
-      ulRef.current.childNodes[optionIdx].focus();
+      (ulRef.current.childNodes[optionIdx] as HTMLLIElement).focus();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   useEffect(() => {
-    const onClickOutside = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
+    const onClickOutside = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
         setIsOpen(false);
       }
     };
@@ -45,12 +58,12 @@ function DropdownInput({ id, placeholder, disabled, initialOptionIdx, onValueUpd
     setIsOpen(!isOpen);
   };
 
-  const onKeyDown = (e) => {
+  const onKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault();
-        if (isOpen && selected === null && ulRef.current) {
-          ulRef.current.firstChild.focus();
+        if (isOpen && selected === null && ulRef.current !== null) {
+          (ulRef.current.firstChild as HTMLLIElement).focus();
         } else if (selected === null) {
           setSelected(options[0]);
         } else if (options.indexOf(selected) === options.length - 1) {
@@ -61,8 +74,8 @@ function DropdownInput({ id, placeholder, disabled, initialOptionIdx, onValueUpd
         break;
       case 'ArrowUp':
         e.preventDefault();
-        if (isOpen && selected === null && ulRef.current) {
-          ulRef.current.lastChild.focus();
+        if (isOpen && selected === null && ulRef.current !== null) {
+          (ulRef.current.lastChild as HTMLLIElement).focus();
         } else if (selected === null) {
           setSelected(options[options.length - 1]);
         } else if (options.indexOf(selected) === 0) {
@@ -77,27 +90,27 @@ function DropdownInput({ id, placeholder, disabled, initialOptionIdx, onValueUpd
     }
   };
 
-  const onOptionClick = (option) => {
+  const onOptionClick = (option: OptionType) => {
     setIsOpen(false);
     setSelected(option);
   };
 
-  const onOptionKeyDown = (e, option) => {
+  const onOptionKeyDown = (e: React.KeyboardEvent<HTMLLIElement>, option: OptionType) => {
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault();
-        if (e.currentTarget.nextSibling) {
-          e.currentTarget.nextSibling.focus();
+        if (e.currentTarget.nextSibling !== null) {
+          (e.currentTarget.nextSibling as HTMLLIElement).focus();
         } else {
-          e.currentTarget.parentNode.firstChild.focus();
+          (e.currentTarget.parentNode?.firstChild as HTMLLIElement).focus();
         }
         break;
       case 'ArrowUp':
         e.preventDefault();
-        if (e.currentTarget.previousSibling) {
-          e.currentTarget.previousSibling.focus();
+        if (e.currentTarget.previousSibling !== null) {
+          (e.currentTarget.previousSibling as HTMLLIElement).focus();
         } else {
-          e.currentTarget.parentNode.lastChild.focus();
+          (e.currentTarget.parentNode?.lastChild as HTMLLIElement).focus();
         }
         break;
       case 'Tab':
@@ -121,23 +134,22 @@ function DropdownInput({ id, placeholder, disabled, initialOptionIdx, onValueUpd
     <div className='dropdown-input' ref={ref}>
       <button
         id={id}
-        value={selected ? selected.value : ''}
         type='button'
         ref={buttonRef}
-        onClick={onClick}
+        value={selected ? selected.value : ''}
         disabled={disabled}
-        onKeyDown={e => onKeyDown(e)}
-        onSubmit={() => console.log("asd")}
+        onClick={onClick}
+        onKeyDown={onKeyDown}
       >
         <span className='label'>
-          {selected ? selected.label : placeholder || 'Please Select'}
+          {selected ? selected.label : placeholder || 'Please select an option'}
         </span>
         <span>{isOpen ? '▲' : '▼'}</span>
       </button>
 
       {isOpen && !disabled && (
         <ul className='menu' ref={ulRef}>
-          {options && options.map(option => (
+          {options.map(option => (
             <li
               className={selected === option ? 'menu-item selected' : 'menu-item'}
               key={option.label}
@@ -153,18 +165,5 @@ function DropdownInput({ id, placeholder, disabled, initialOptionIdx, onValueUpd
     </div>
   );
 }
-
-/*
-function DropDownInputCopied({ id, placeholder, disabled, initialValue, onValueUpdate, options, label }) {
-  useEffect(() => {
-    if (dropdown === false && selected === null) {
-      // if no option is selected on click outside, show error
-      setError("Please select an option.");
-    } else {
-      setError("");
-    }
-  }, [dropdown]);
-}
-*/
 
 export default DropdownInput;

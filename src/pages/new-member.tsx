@@ -1,28 +1,45 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { createMember } from '../api/member';
 import DropdownInput from '../components/dropdown-input';
 
 import '../styles/pages/new-member.css';
 
-function NewMember() {
-  // TODO: add feedback for becoming a member
-  const [successMsg, setSuccessMsg] = useState(null);
-  const [errorMsg, setErrorMsg] = useState(null);
+interface CreateMemberFormElements extends HTMLFormControlsCollection {
+  firstName: HTMLInputElement,
+  lastName: HTMLInputElement,
+  email: HTMLInputElement,
+  isStudent: HTMLInputElement,
+}
 
-  const onSubmit = (e) => {
+interface CreateMemberFormElement extends HTMLFormElement {
+  readonly elements: CreateMemberFormElements,
+}
+
+function NewMember() {
+  const [successMsg, setSuccessMsg] = useState<string | null>(null);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  const onSubmit = (e: React.FormEvent<CreateMemberFormElement>) => {
     e.preventDefault();
 
+    if (e.currentTarget.elements.isStudent.value === '') {
+      // TODO: improve error (e.g. highlight invalid fields)
+      setErrorMsg('Please set your membership type');
+      return;
+    }
+
     const data = {
-      'firstName': e.target.firstName.value,
-      'lastName': e.target.lastName.value,
-      'email': e.target.email.value,
-      'isStudent': e.target.isStudent.value !== '' ? e.target.isStudent.value === 'true' : null,
+      'firstName': e.currentTarget.elements.firstName.value,
+      'lastName': e.currentTarget.elements.lastName.value,
+      'email': e.currentTarget.elements.email.value,
+      'isStudent': e.currentTarget.elements.isStudent.value === 'true',
     };
 
     // TODO: disable submission if already sending
     createMember(data).then(resp => {
       setSuccessMsg('Successfully applied to become a member!');
       setErrorMsg(null);
+      // TODO: reset form
     }).catch(({ response: resp }) => {
       // TODO: improve error (e.g. highlight invalid fields)
       // TODO: if cannot reach server, no resp is given, so this needs to be changed
@@ -59,7 +76,7 @@ function NewMember() {
           <label htmlFor='isStudent'>Membership type:</label>
           <DropdownInput
             id='isStudent'
-            placeholder='Select type of membership'
+            placeholder='Please select a membership type'
             options={[
               { label: 'Student', value: true },
               { label: 'Non-student', value: false },

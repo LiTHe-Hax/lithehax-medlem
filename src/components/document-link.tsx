@@ -1,6 +1,12 @@
 import '../styles/components/document-link.css';
 
-function DocumentLink({ link, label, saveAs }) {
+interface DocumentLinkProps {
+  link: string,
+  label: string,
+  saveAs?: string,
+};
+
+function DocumentLink({ link, label, saveAs }: DocumentLinkProps) {
   return (
     <span className='document-link'>
       <a download={saveAs} href={link}>
