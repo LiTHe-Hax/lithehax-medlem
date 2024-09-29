@@ -53,3 +53,9 @@
 /* Ensures that there are no unnecessarily large gaps at top and bottom. */
 .app > main > section > *:first-child { margin-top: 0; }
 .app > main > section > *:last-child { margin-bottom: 0; }
+
+.app > main > section.thin {
+  margin: 3rem auto;
+  /* 100% - 6rem fakes a 3rem horizontal margin */
+  max-width: min(36rem, calc(100% - 6rem));
+}
