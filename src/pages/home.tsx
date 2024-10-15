@@ -46,10 +46,10 @@ function Home() {
       <p><b>Adress:</b> LiTHe Hax, Kårallen, Universitetet, 581 83 Linköping</p>
 
       <h3>Documents</h3>
-      <DocumentLink
-        link='/Kallelse-Extrainsatt-Arsmote.pdf'
-        saveAs='Kallelse-Extrainsatt-Årsmöte'
-        label='Kallelse-Extrainsatt-Årsmöte.pdf'
+      <DocumentLink 
+        link='/Kallelse-Arsmote.pdf'
+        saveAs='Kallelse-Årsmöte'
+        label='Kallelse-Årsmöte.pdf'
       />
       <DocumentLink
         link='/LiTHe-Hax-Stadgar-Reviderade.pdf'
