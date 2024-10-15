@@ -15,8 +15,8 @@ function Home() {
       <h2>Contact</h2>
       <div className='board-members'>
         <BoardMemberCard
-          fullName='Isak Horvath'
-          hackerTag='Xecutive_1337'
+          fullName='Isak/Tyson Horvath'
+          hackerTag='Tavro'
           email='isak.horvath@d-sektionen.se'
           position='Chairman'
           imageSrc='/chairman.jpg'
