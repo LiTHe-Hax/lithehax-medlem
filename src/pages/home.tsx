@@ -19,25 +19,52 @@ function Home() {
           hackerTag='Tavro'
           email='isak.horvath@d-sektionen.se'
           position='Chairman'
-          imageSrc='/chairman.jpg'
+          imageSrc='/contacts/tyson_h.jpg'
         />
         <BoardMemberCard
           fullName='Lukas Wandel'
           hackerTag='DominoFives'
           position='Cashier'
-          imageSrc='/cashier.jpg'
+          imageSrc='/contacts/lukas_w.jpg'
         />
         <BoardMemberCard
           fullName='Viktor Holta'
           hackerTag='Parslie'
+          email='viktor.holta@d-sektionen.se'
           position='Secretary'
-          imageSrc='/secretary.jpg'
+          imageSrc='/contacts/viktor_h.jpg'
         />
         <BoardMemberCard
           fullName='Adam Bohman'
           hackerTag='Whiibie'
           position='Accountant'
-          imageSrc='/accountant.jpg'
+          imageSrc='/contacts/adam_b.jpg'
+        />
+        <BoardMemberCard
+          fullName='Wilmer Segerstedt'
+          hackerTag='airless'
+          position='Board member'
+          imageSrc='/contacts/wilmer_s.jpg'
+        />
+        <BoardMemberCard
+          fullName='William Minidis'
+          hackerTag='windis'
+          email='william.minidis@d-sektionen.se'
+          position='Board member'
+          imageSrc='/contacts/william_m.jpg'
+        />
+        <BoardMemberCard
+          fullName='Anton Oom'
+          hackerTag='oomega'
+          email='anton.oom@d-sektionen.se'
+          position='Board member'
+          imageSrc='/contacts/anton_o.jpg'
+        />
+        <BoardMemberCard
+          fullName='Tove Haernfelt'
+          hackerTag='thetov'
+          position='Board member'
+          imageSrc='/contacts/tove_h.jpg'
         />
       </div>
 

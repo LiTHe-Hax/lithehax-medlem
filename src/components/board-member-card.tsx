@@ -13,7 +13,7 @@ function BoardMemberCard({ fullName, hackerTag, position, imageSrc, email }: Boa
     <div className='board-member-card'>
       {imageSrc
         ? <img src={imageSrc} alt={fullName} />
-        : <img src='/placeholder.png' alt={fullName} />}
+        : <img src='/contact/placeholder.png' alt={fullName} />}
       <div className='board-member-info'>
         <span className='name'>{fullName} @{hackerTag}</span>
         <span className='position'>{position}</span>
