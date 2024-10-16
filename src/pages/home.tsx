@@ -74,17 +74,17 @@ function Home() {
 
       <h3>Documents</h3>
       <DocumentLink 
-        link='/Kallelse-Arsmote.pdf'
+        link='/documents/Kallelse-Arsmote.pdf'
         saveAs='Kallelse-Årsmöte'
         label='Kallelse-Årsmöte.pdf'
       />
       <DocumentLink
-        link='/LiTHe-Hax-Stadgar-Reviderade.pdf'
+        link='/documents/LiTHe-Hax-Stadgar-Reviderade.pdf'
         saveAs='LiTHe-Hax-Stadgar'
         label='LiTHe-Hax-Stadgar.pdf'
       />
       <DocumentLink
-        link='/LiTHe-Hax-Konstituerande-Protokoll.pdf'
+        link='/documents/LiTHe-Hax-Konstituerande-Protokoll.pdf'
         saveAs='LiTHe-Hax-Konstituerande-Protokoll'
         label='LiTHe-Hax-Konstituerande-Protokoll.pdf'
       />
