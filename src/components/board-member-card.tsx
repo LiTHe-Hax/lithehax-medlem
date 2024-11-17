@@ -19,7 +19,7 @@ function BoardMemberCard({ fullName, hackerTag, position, imageSrc, email }: Boa
         <span className='position'>{position}</span>
         {email
           ? <a className='email' href={`mailto:${email}`}>{email}</a>
-          : <span className='email'>(mail comming soon)</span>}
+          : <span className='email'>(mail coming soon)</span>}
       </div>
     </div>
   )
