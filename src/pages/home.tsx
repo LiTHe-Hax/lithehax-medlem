@@ -17,52 +17,56 @@ function Home() {
         <BoardMemberCard
           fullName='Isak/Tyson Horvath'
           hackerTag='Tavro'
-          email='isak.horvath@d-sektionen.se'
+          email='ordforande@lithehax.se'
           position='Chairman'
           imageSrc='/contacts/tyson_h.jpg'
         />
         <BoardMemberCard
           fullName='Lukas Wandel'
           hackerTag='DominoFives'
+          email='kassor@lithehax.se'
           position='Cashier'
           imageSrc='/contacts/lukas_w.jpg'
         />
         <BoardMemberCard
           fullName='Viktor Holta'
           hackerTag='Parslie'
-          email='viktor.holta@d-sektionen.se'
+          email='sekreterare@lithehax.se'
           position='Secretary'
           imageSrc='/contacts/viktor_h.jpg'
         />
         <BoardMemberCard
           fullName='Adam Bohman'
           hackerTag='Whiibie'
+          email='revisor@lithehax.se'
           position='Accountant'
           imageSrc='/contacts/adam_b.jpg'
         />
         <BoardMemberCard
           fullName='Wilmer Segerstedt'
           hackerTag='airless'
+          email='ledamot1@lithehax.se'
           position='Board member'
           imageSrc='/contacts/wilmer_s.jpg'
         />
         <BoardMemberCard
           fullName='William Minidis'
           hackerTag='windis'
-          email='william.minidis@d-sektionen.se'
+          email='ledamot4@lithehax.se'
           position='Board member'
           imageSrc='/contacts/william_m.jpg'
         />
         <BoardMemberCard
           fullName='Anton Oom'
           hackerTag='oomega'
-          email='anton.oom@d-sektionen.se'
+          email='ledamot3@lithehax.se'
           position='Board member'
           imageSrc='/contacts/anton_o.jpg'
         />
         <BoardMemberCard
           fullName='Tove Haernfelt'
           hackerTag='thetov'
+          email='ledamot2@lithehax.se'
           position='Board member'
           imageSrc='/contacts/tove_h.jpg'
         />
@@ -73,7 +77,7 @@ function Home() {
       <p><b>Adress:</b> LiTHe Hax, Kårallen, Universitetet, 581 83 Linköping</p>
 
       <h3>Documents</h3>
-      <DocumentLink 
+      <DocumentLink
         link='/documents/Kallelse-Arsmote.pdf'
         saveAs='Kallelse-Årsmöte'
         label='Kallelse-Årsmöte.pdf'
