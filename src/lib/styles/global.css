@@ -3,6 +3,9 @@
     --fg: #ffffff;
     --header-bg: #002200;
     --header-fg: #33ff33;
+    --section-bg: #1a1a1a;
+    --section-fg: #ffffff;
+    --heading-fg: #33ff33;
 }
 
 body {
