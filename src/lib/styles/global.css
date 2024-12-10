@@ -14,7 +14,7 @@
     --link-btn-bg: #333333;
     --link-btn-fg: #ffffff;
 
-    --form-label-fg: #33ff33;
+    --input-label-fg: #33ff33;
     --input-bg: #333333;
     --input-border: #444444;
     --input-fg: #33ff33;
@@ -24,6 +24,8 @@
     --button-shadow: #00000044;
     --button-hover-bg: var(--button-fg);
     --button-hover-fg: var(--button-bg);
+    --success-color: #33ff33;
+    --error-color: #ff3333;
 }
 
 body {

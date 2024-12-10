@@ -1,7 +1,16 @@
 <script lang="ts">
+    import FormSubmit from "$lib/components/FormSubmit.svelte";
+    import FormField from "$lib/components/FormField.svelte";
     import Section from "$lib/components/Section.svelte";
 
+    let firstNameError: string | undefined = $state(undefined);
+    let lastNameError: string | undefined = $state(undefined);
+    let emailError: string | undefined = $state("This is an error"); // TODO: init to undefined
+    let membershipTypeError: string | undefined = $state(undefined);
+
     function requestMembership(e: SubmitEvent) {
+        e.preventDefault();
+
         const formData = new FormData(e.target as HTMLFormElement);
         let firstName = formData.get("firstName")?.toString();
         let lastName = formData.get("lastName")?.toString();
@@ -19,90 +28,34 @@
         membership is approved by our board, we will contact you with further details.
     </p>
 
-    <form on:submit|preventDefault={requestMembership}>
-        <div class="field firstName">
-            <label for="firstName">First name:</label>
-            <input id="firstName" name="firstName" type="text" required />
-        </div>
-
-        <div class="field lastName">
-            <label for="lastName">Last name:</label>
-            <input id="lastName" name="lastName" type="text" required />
-        </div>
-
-        <div class="field email">
-            <label for="email">Email:</label>
-            <input id="email" name="email" type="email" required />
-        </div>
-
-        <div class="field membershipType">
-            <label for="membershipType">Membership type:</label>
-            <select id="membershipType" name="membershipType" required>
-                <option value="">--Please select a membership type--</option>
-                <option value="student">Student</option>
-                <option value="non-student">Non-student</option>
-            </select>
-        </div>
-
-        <div class="field submit">
-            <!-- The invisible span makes the spacing between the button
-             consistent with the spacing between the other fields. -->
-            <span style="visibility: hidden;">.</span>
-            <button type="submit">Become member</button>
-        </div>
+    <form onsubmit={requestMembership}>
+        <FormField name="firstName" label="First name" type="text" required error={firstNameError} />
+        <FormField name="lastName" label="Last name" type="text" required error={lastNameError} />
+        <FormField name="email" label="Email" type="email" required error={emailError} />
+        <FormField name="membershipType" label="Membership type" type="select" required error={membershipTypeError}>
+            <option value="">--Please select a membership type--</option>
+            <option value="student">Student</option>
+            <option value="non-student">Non-student</option>
+        </FormField>
+        <FormSubmit>Apply for membership</FormSubmit>
     </form>
 </Section>
 
 <style>
-    /*
-    TODO: Preferably the inputs and input fields should be
-          separated from the page.
-    */
-
     form {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 0.8rem;
     }
 
-    .field {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .email, .membershipType, .submit {
+    form > :global(:nth-child(3)),
+    form > :global(:nth-child(4)) {
         grid-column: 1 / span 2;
     }
 
-    label {
-        color: var(--form-label-fg);
-    }
-
-    input, select {
-        padding: 0.5rem;
-        border: 1px solid var(--input-border);
-        border-radius: 0.25rem;
-        background-color: var(--input-bg);
-        color: var(--input-fg);
-        box-shadow: inset 0 1px 3px 1px var(--input-shadow);
-    }
-
-    button {
-        padding: 0.5rem;
-        border: 0;
-        border-radius: 0.25rem;
-        background-color: var(--button-bg);
-        color: var(--button-fg);
-        box-shadow: 0 2px 4px 0 var(--button-shadow);
-        font-size: 1em;
-        font-weight: bold;
-        transform: scaley(1);
-        transition: all 150ms ease-out;
-    }
-
-    button:hover {
-        background-color: var(--button-hover-bg);
-        color: var(--button-hover-fg);
-        transform: scaley(1.1);
+    form > :global(:nth-child(5)) {
+        grid-column: 1 / span 2;
+        align-self: flex-end;
     }
 </style>
