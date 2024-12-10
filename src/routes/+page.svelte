@@ -1,5 +1,6 @@
 <script lang="ts">
-    import Section from "$lib/components/Section.svelte";
+    import DocumentLink from "$lib/components/DocumentLink.svelte";
+import Section from "$lib/components/Section.svelte";
 </script>
 
 <Section>
@@ -20,5 +21,17 @@
     <p><b>Adress:</b> LiTHe Hax, Kårallen, Universitetet, 581 83 Linköping</p>
 
     <h3>Documents</h3>
-    <!-- TODO: add documents -->
+    <div class="document-list">
+        <DocumentLink link="/documents/Kallelse-Årsmote.pdf" />
+        <DocumentLink link="/documents/LiTHe-Hax-Stadgar-Reviderade.pdf" />
+        <DocumentLink link="/documents/LiTHe-Hax-Konstituerande-Protokoll.pdf" />
+    </div>
 </Section>
+
+<style>
+    .document-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+</style>

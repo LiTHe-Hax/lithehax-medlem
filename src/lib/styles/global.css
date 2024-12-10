@@ -5,7 +5,10 @@
     --header-fg: #33ff33;
     --section-bg: #1a1a1a;
     --section-fg: #ffffff;
+
     --heading-fg: #33ff33;
+    --link-btn-bg: #333333;
+    --link-btn-fg: #ffffff;
 }
 
 body {
