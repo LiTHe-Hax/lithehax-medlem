@@ -7,6 +7,10 @@
     --section-fg: #ffffff;
 
     --heading-fg: #33ff33;
+
+    --link-fg: #33ff33;
+    --link-hover-fg: #aaffbf;
+
     --link-btn-bg: #333333;
     --link-btn-fg: #ffffff;
 }
@@ -17,4 +21,14 @@ body {
     background-color: var(--bg);
     color: var(--fg);
     font-family: sans-serif;
+}
+
+a {
+    color: var(--link-fg);
+    text-decoration: none;
+    transition: color 150ms ease-out;
+}
+
+a:hover {
+    color: var(--link-hover-fg);
 }

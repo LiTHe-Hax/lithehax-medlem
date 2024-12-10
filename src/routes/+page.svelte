@@ -1,6 +1,16 @@
 <script lang="ts">
+    import ContactCard from "$lib/components/ContactCard.svelte";
     import DocumentLink from "$lib/components/DocumentLink.svelte";
-import Section from "$lib/components/Section.svelte";
+    import Section from "$lib/components/Section.svelte";
+
+    import chairmanImg from "$lib/images/contacts/tyson_h.jpg";
+    import cashierImg from "$lib/images/contacts/lukas_w.jpg";
+    import secretaryImg from "$lib/images/contacts/viktor_h.jpg";
+    import accountantImg from "$lib/images/contacts/adam_b.jpg";
+    import member1Img from "$lib/images/contacts/wilmer_s.jpg";
+    import member2Img from "$lib/images/contacts/tove_h.jpg";
+    import member3Img from "$lib/images/contacts/anton_o.jpg";
+    import member4Img from "$lib/images/contacts/william_m.jpg";
 </script>
 
 <Section>
@@ -14,7 +24,56 @@ import Section from "$lib/components/Section.svelte";
     </p>
 
     <h2>Contact</h2>
-    <!-- TODO: add contact cards -->
+    <div class="contact-grid">
+        <ContactCard
+            fullName="Isak/Tyson Horvath"
+            hackerTag="Tavro"
+            position="Chairman"
+            email="ordforande@lithehax.se"
+            image={chairmanImg} />
+        <ContactCard
+            fullName="Lukas Wandel"
+            hackerTag="DominoFives"
+            position="Cashier"
+            email="kassor@lithehax.se"
+            image={cashierImg} />
+        <ContactCard
+            fullName="Viktor Holta"
+            hackerTag="Parslie"
+            position="Secretary"
+            email="sekreterare@lithehax.se"
+            image={secretaryImg} />
+        <ContactCard
+            fullName="Adam Bohman"
+            hackerTag="Whiibie"
+            position="Accountant"
+            email="revisor@lithehax.se"
+            image={accountantImg} />
+        <ContactCard
+            fullName="Wilmer Segerstedt"
+            hackerTag="airless"
+            position="Board member"
+            email="ledamot1@lithehax.se"
+            image={member1Img} />
+        <ContactCard
+            fullName="Tove Haernfelt"
+            hackerTag="thetov"
+            position="Board member"
+            email="ledamot2@lithehax.se"
+            image={member2Img} />
+        <ContactCard
+            fullName="Anton Oom"
+            hackerTag="oomega"
+            position="Board member"
+            email="ledamot3@lithehax.se"
+            image={member3Img} />
+        <ContactCard
+            fullName="William Minidis"
+            hackerTag="windis"
+            position="Board member"
+            email="ledamot4@lithehax.se"
+            image={member4Img} />
+    </div>
 
     <h2>Organization details</h2>
     <p><b>Organization Number:</b> 802547-1767</p>
@@ -29,6 +88,12 @@ import Section from "$lib/components/Section.svelte";
 </Section>
 
 <style>
+    .contact-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+    }
+
     .document-list {
         display: flex;
         flex-direction: column;
