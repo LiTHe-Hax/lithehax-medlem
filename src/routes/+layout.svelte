@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import "$lib/styles/global.css"; // This stylesheet affects the entire site.
     import NavButton from "$lib/components/NavButton.svelte";
 </script>
@@ -6,8 +7,8 @@
 <header>
     <span class="title">LiTHe Hax</span>
     <nav>
-        <NavButton href="/" label="Home" />
-        <NavButton href="/new-member" label="Member" />
+        <NavButton href={`${base}/`} label="Home" />
+        <NavButton href={`${base}/new-member`} label="Member" />
     </nav>
 </header>
 
