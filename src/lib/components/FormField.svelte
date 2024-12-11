@@ -46,6 +46,7 @@
     }
 
     label {
+        align-self: flex-start;
         color: var(--input-label-fg);
     }
 
