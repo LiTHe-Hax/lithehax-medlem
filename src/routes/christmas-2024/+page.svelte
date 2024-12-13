@@ -3,6 +3,7 @@
 
     type LeaderboardRow = [string, string];
     let leaderboardRows = $state<LeaderboardRow[] | undefined>(undefined);
+    let hasError = $state(false);
 
     const SHEET_URL = 'https://docs.google.com/spreadsheets/d/14h0sFurutGcILR8XnIPeVq3mBKpCXTCFUmIeAFZCvQg/edit?usp=sharing';
 
@@ -28,7 +29,6 @@
                 Array.from(row.querySelectorAll('td')).map((cell) => cell.innerText.trim())
             );
 
-            console.log("data ", data);
             let result: LeaderboardRow[] = [];
             for (let i = 2; i < data.length; i++) {
                 const [timestamp, nickname] = data[i];
@@ -36,11 +36,11 @@
                     result.push([nickname, timestamp]);
                 }
             }
-            console.log("result ", result);
 
             return result;
         } catch (error) {
             console.error('Error:', error);
+            hasError = true;
             return null;
         }
     }
@@ -57,7 +57,11 @@
 
 <Section isThin>
     <h1>Christmas CTF 2024 Leaderboard</h1>
-    {#if leaderboardRows !== undefined}
+    {#if hasError}
+        <p>Could not load leaderboard, try again later.</p>
+    {:else if leaderboardRows === undefined}
+        <p>Loading leaderboard...</p>
+    {:else}
         <table>
             <thead>
                 <tr>
@@ -76,8 +80,6 @@
                 {/each}
             </tbody>
         </table>
-    {:else}
-        <p>Loading leaderboard data...</p>
     {/if}
 </Section>
 
