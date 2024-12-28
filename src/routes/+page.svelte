@@ -15,6 +15,10 @@
     import member4Img from "$lib/images/contacts/william_m.jpg";
 </script>
 
+<svelte:head>
+    <title>LiTHe Hax</title>
+</svelte:head>
+
 <Section>
     <h1>About us</h1>
     <p>

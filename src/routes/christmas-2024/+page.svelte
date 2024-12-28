@@ -55,6 +55,10 @@
     });
 </script>
 
+<svelte:head>
+    <title>LiTHe Hax - Christmas 2024</title>
+</svelte:head>
+
 <Section isThin>
     <h1>Christmas CTF 2024 Leaderboard</h1>
     {#if hasError}
