@@ -62,6 +62,10 @@
     }
 </script>
 
+<svelte:head>
+    <title>LiTHe Hax - Member</title>
+</svelte:head>
+
 <Section isThin>
     <h1>Become a member</h1>
     <p>
