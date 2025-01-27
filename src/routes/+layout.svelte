@@ -9,7 +9,7 @@
     <nav>
         <NavButton href={`${base}/`} label="Home" />
         <NavButton href={`${base}/new-member`} label="Member" />
-        <NavButton href={`${base}/christmas-2024`} label="Christmas 2024" />
+        <NavButton href={`${base}/ctf`} label="LiTHe Hax CTF" />
     </nav>
 </header>
 
