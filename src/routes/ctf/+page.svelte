@@ -21,7 +21,7 @@
     <p><strong>Date:</strong> March 8th, 2025</p>
     <p>
         <strong>Location:</strong>
-        <a href="https://link.mazemap.com/0PapbQ2Z">
+        <a href="https://use.mazemap.com/?utm_medium=longurl#v=1&config=liu&campusid=742&zlevel=2&center=15.576432,58.398370&zoom=18&sharepoitype=poi&sharepoi=1002771474">
             Linköping University, Sweden
         </a>
     </p>
