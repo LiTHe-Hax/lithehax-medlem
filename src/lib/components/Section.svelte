@@ -10,17 +10,31 @@
 </section>
 
 <style>
-    section {
-        margin: 3rem;
-        padding: 1.5rem;
-        border-radius: 0.5rem;
-        background-color: var(--section-bg);
-        color: var(--section-fg);
+    /* Mobile styling */
+    @media screen and (min-width: 0px) {
+        section {
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: var(--section-bg);
+            color: var(--section-fg);
+        }
     }
 
-    section.thin {
-        margin: 3rem auto;
-        max-width: min(36rem, calc(100% - 6rem)); /* Fakes a 3rem horizontal margin */
+    /* Desktop styling */
+    @media screen and (min-width: 768px) {
+        section {
+            margin: 3rem;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: var(--section-bg);
+            color: var(--section-fg);
+        }
+
+        section.thin {
+            margin: 3rem auto;
+            max-width: min(36rem, calc(100% - 6rem)); /* Fakes a 3rem horizontal margin */
+        }
     }
 
     /* Ensures that there are no unnecessarily large gaps at top or bottom */
