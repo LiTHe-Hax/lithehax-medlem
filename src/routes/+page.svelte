@@ -94,10 +94,22 @@
 </Section>
 
 <style>
-    .contact-grid {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+    /* Mobile styling */
+    @media screen and (min-width: 0px) {
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    /* Desktop styling */
+    @media screen and (min-width: 768px) {
+        .contact-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+        }
     }
 
     .document-list {
