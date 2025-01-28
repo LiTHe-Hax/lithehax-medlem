@@ -41,21 +41,29 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        min-width: 0; /* Makes info box take only remaining space when small */
     }
 
     .name {
         color: var(--heading-fg);
         font-size: 1.175em;
         font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .position {
         margin-bottom: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .email {
         /* Clamps the boundaries of the link */
+        width: 100%;
         align-self: flex-start;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     /* Email link is also styled by the global stylesheet */
