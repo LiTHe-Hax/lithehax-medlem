@@ -45,7 +45,7 @@
 </Section>
 
 <Section isThin>
-    <h1>LiU CTF — March 8th</h1>
+    <h1>LiU CTF</h1>
 
     <img src={cyberRoom} alt="Cybersecurity Room" />
     <p>
