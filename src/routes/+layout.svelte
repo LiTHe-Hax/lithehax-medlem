@@ -2,10 +2,11 @@
     import { base } from "$app/paths";
     import "$lib/styles/global.css"; // This stylesheet affects the entire site.
     import NavButton from "$lib/components/NavButton.svelte";
+    import logo from "$lib/images/header-logo.svg";
 </script>
 
 <header>
-    <span class="title">LiTHe Hax</span>
+    <img class="logo" src={logo} alt="logo" />
     <nav>
         <NavButton href={`${base}/`} label="Home" />
         <NavButton href={`${base}/new-member`} label="Member" />
@@ -19,6 +20,9 @@
 
 <style>
     header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         box-sizing: border-box;
         padding: 2rem;
         width: 100vw;
@@ -33,6 +37,12 @@
         font-size: 4em;
         font-weight: bold;
         line-height: 1; /* Makes space above title consistent with space below nav */
+    }
+
+    .logo {
+        height: 4rem;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
     }
 
     nav {
