@@ -15,7 +15,7 @@
     <h1>Workshop</h1>
     <img src={studenthuset} alt="studenthuset" />
     <p>
-        We will be holding a workshop in preparation for out upcoming CTF, which you can read more about in the section below.
+        We will be holding a workshop in preparation for our upcoming CTF, which you can read more about in the section below.
         During the workshop we will explain and showcase example challenges, that will resemble the actual
         challenges you will tackle during the CTF.
     </p>
