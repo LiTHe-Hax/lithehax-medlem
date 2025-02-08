@@ -13,7 +13,7 @@
 
 <Section isThin>
     <h1>Workshop</h1>
-    <img src={studenthuset} />
+    <img src={studenthuset} alt="studenthuset" />
     <p>
         We will be holding a workshop in preparation for out upcoming CTF, which you can read more about in the section below.
         During the workshop we will explain and showcase example challenges, that will resemble the actual
@@ -39,8 +39,8 @@
 
     <hr />
     <div class="sponsor-logos">
-        <img src={sickLogo} />
-        <img src={sectraLogo} />
+        <img src={sickLogo} alt="sick logo" />
+        <img src={sectraLogo} alt="sectra logo" />
     </div>
 </Section>
 
@@ -77,9 +77,9 @@
 
     <hr />
     <div class="sponsor-logos">
-        <img src={sickLogo} />
-        <img src={sectraLogo} />
-        <img src={sylogLogo} />
+        <img src={sickLogo} alt="sick logo" />
+        <img src={sectraLogo} alt="sectra logo" />
+        <img src={sylogLogo} alt="sylog logo" />
     </div>
 </Section>
 
