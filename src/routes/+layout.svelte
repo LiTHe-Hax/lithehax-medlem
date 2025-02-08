@@ -30,15 +30,6 @@
         color: var(--header-fg);
     }
 
-    .title {
-        display: block; /* Makes centering work. */
-        margin-bottom: 1rem;
-        text-align: center;
-        font-size: 4em;
-        font-weight: bold;
-        line-height: 1; /* Makes space above title consistent with space below nav */
-    }
-
     .logo {
         height: 4rem;
         max-width: 100%;
