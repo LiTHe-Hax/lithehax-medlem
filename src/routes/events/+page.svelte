@@ -59,7 +59,7 @@
     </p>
     <p>
         All non-student participants have to bring their own laptops, but it's recommended that
-        every participant brings their own, since we may not be able to provided Kali Linux images on site.
+        every participant brings their own, since we may not be able to provide Kali Linux images on site.
     </p>
     <p><strong>Date:</strong> 17:15-22:00, March 8th, 2025</p>
     <p>
