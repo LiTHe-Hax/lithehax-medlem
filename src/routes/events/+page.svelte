@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-    <title>LiTHe Hax CTF</title>
+    <title>LiTHe Hax - Events</title>
 </svelte:head>
 
 <Section isThin>
