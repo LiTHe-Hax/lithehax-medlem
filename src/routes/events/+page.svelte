@@ -1,5 +1,7 @@
 <script lang="ts">
     import Section from "$lib/components/Section.svelte";
+    import DocumentLink from "$lib/components/DocumentLink.svelte";
+    import { base } from "$app/paths";
     import cyberRoom from "$lib/images/ctf/cyber-room.jpg";
     import sickLogo from "$lib/images/ctf/sick-logo.png";
     import sectraLogo from "$lib/images/ctf/sectra-logo.png";
@@ -35,6 +37,11 @@
             SH62 and SH63 (Linköping University, Sweden)
         </a>
     </p>
+    <p>
+        <strong>Workshop tasks:</strong>
+        <DocumentLink class="workshop" link={`${base}/documents/workshop.zip`} />
+    </p>
+
     <hr />
     <div class="sponsor-logos">
         <img src={sickLogo} alt="sick logo" />
