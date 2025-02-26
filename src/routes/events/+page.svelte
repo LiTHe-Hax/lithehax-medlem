@@ -23,6 +23,11 @@
         There are 80 available seats and the ones who register will be provided free food, which has been
         sponsored by the companies below.
     </p>
+    <p>
+        50 people have signed up for the event, and a check will be conducted at the door when handing out the food.
+        If you are not registered, you are still welcome to attend, but food will only be available if there are
+        leftovers after the presentation.
+    </p>
     <p><strong>Date:</strong> 17:15-20:00, February 27th, 2025</p>
     <p>
         <strong>Location:</strong>
@@ -30,13 +35,6 @@
             SH62 and SH63 (Linköping University, Sweden)
         </a>
     </p>
-    <p>
-        <strong>Registration form:</strong>
-        <a href="https://forms.gle/S3XDrtoy4MbaK6ws8">
-            https://forms.gle/S3XDrtoy4MbaK6ws8
-        </a>
-    </p>
-
     <hr />
     <div class="sponsor-logos">
         <img src={sickLogo} alt="sick logo" />
