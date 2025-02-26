@@ -1,5 +1,7 @@
 <script lang="ts">
     import Section from "$lib/components/Section.svelte";
+    import DocumentLink from "$lib/components/DocumentLink.svelte";
+    import { base } from "$app/paths";
     import cyberRoom from "$lib/images/ctf/cyber-room.jpg";
     import sickLogo from "$lib/images/ctf/sick-logo.png";
     import sectraLogo from "$lib/images/ctf/sectra-logo.png";
@@ -24,7 +26,7 @@
         sponsored by the companies below.
     </p>
     <p>
-        50 people have signed up for the event, and a check will be conducted at the door when handing out the food.
+        <strong style="color:#33ff33;">50 people</strong> have signed up for the event, and a check will be conducted at the door when handing out the food.
         If you are not registered, you are still welcome to attend, but food will only be available if there are
         leftovers after the presentation.
     </p>
@@ -35,6 +37,11 @@
             SH62 and SH63 (Linköping University, Sweden)
         </a>
     </p>
+    <p>
+        <strong>Workshop tasks:</strong>
+        <DocumentLink class="workshop" link={`${base}/documents/workshop.zip`} />
+    </p>
+
     <hr />
     <div class="sponsor-logos">
         <img src={sickLogo} alt="sick logo" />
