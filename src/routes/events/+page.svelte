@@ -26,7 +26,7 @@
         sponsored by the companies below.
     </p>
     <p>
-        50 people have signed up for the event, and a check will be conducted at the door when handing out the food.
+        <strong style="color:#33ff33;">50 people</strong> have signed up for the event, and a check will be conducted at the door when handing out the food.
         If you are not registered, you are still welcome to attend, but food will only be available if there are
         leftovers after the presentation.
     </p>
