@@ -41,6 +41,10 @@
         <strong>Workshop tasks:</strong>
         <DocumentLink class="workshop" link={`${base}/documents/workshop.zip`} />
     </p>
+    <p>
+        <strong>Workshop presentation:</strong>
+        <DocumentLink class="workshop" link={`${base}/documents/Workshop Presentation.pptx`} />
+    </p>
 
     <hr />
     <div class="sponsor-logos">
