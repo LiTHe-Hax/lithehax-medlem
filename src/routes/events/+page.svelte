@@ -1,57 +1,14 @@
 <script lang="ts">
     import Section from "$lib/components/Section.svelte";
-    import DocumentLink from "$lib/components/DocumentLink.svelte";
-    import { base } from "$app/paths";
     import cyberRoom from "$lib/images/ctf/cyber-room.jpg";
     import sickLogo from "$lib/images/ctf/sick-logo.png";
     import sectraLogo from "$lib/images/ctf/sectra-logo.png";
     import sylogLogo from "$lib/images/ctf/sylog-logo.png";
-    import studenthuset from "$lib/images/ctf/studenthuset.jpg";
 </script>
 
 <svelte:head>
     <title>LiTHe Hax - Events</title>
 </svelte:head>
-
-<Section isThin>
-    <h1>Workshop</h1>
-    <img src={studenthuset} alt="studenthuset" />
-    <p>
-        We will be holding a workshop in preparation for our upcoming CTF, which you can read more about in the section below.
-        During the workshop we will explain and showcase example challenges, that will resemble the actual
-        challenges you will tackle during the CTF.
-    </p>
-    <p>
-        There are 80 available seats and the ones who register will be provided free food, which has been
-        sponsored by the companies below.
-    </p>
-    <p>
-        <strong style="color:#33ff33;">50 people</strong> have signed up for the event, and a check will be conducted at the door when handing out the food.
-        If you are not registered, you are still welcome to attend, but food will only be available if there are
-        leftovers after the presentation.
-    </p>
-    <p><strong>Date:</strong> 17:15-20:00, February 27th, 2025</p>
-    <p>
-        <strong>Location:</strong>
-        <a href="https://use.mazemap.com/#v=1&config=liu&campusid=742&zlevel=6&center=15.577904,58.397057&zoom=18.9&sharepoitype=poi&sharepoi=1000927265">
-            SH62 and SH63 (Linköping University, Sweden)
-        </a>
-    </p>
-    <p>
-        <strong>Workshop tasks:</strong>
-        <DocumentLink class="workshop" link={`${base}/documents/workshop.zip`} />
-    </p>
-    <p>
-        <strong>Workshop presentation:</strong>
-        <DocumentLink class="workshop" link={`${base}/documents/Workshop Presentation.pptx`} />
-    </p>
-
-    <hr />
-    <div class="sponsor-logos">
-        <img src={sickLogo} alt="sick logo" />
-        <img src={sectraLogo} alt="sectra logo" />
-    </div>
-</Section>
 
 <Section isThin>
     <h1>LiU CTF</h1>

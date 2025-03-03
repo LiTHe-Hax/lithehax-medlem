@@ -24,6 +24,7 @@
         <a href={`${base}/`} onclick={toggleNav}>Home</a>
         <a href={`${base}/new-member`} onclick={toggleNav}>Member</a>
         <a href={`${base}/events`} onclick={toggleNav}>Events</a>
+        <a href={`${base}/past-events`} onclick={toggleNav}>Past Events</a>
     </nav>
 </header>
 
@@ -33,6 +34,7 @@
         <a href={`${base}/`}>Home</a>
         <a href={`${base}/new-member`}>Member</a>
         <a href={`${base}/events`}>Events</a>
+        <a href={`${base}/past-events`}>Past Events</a>
     </nav>
 </header>
 
