@@ -4,6 +4,8 @@
     import sickLogo from "$lib/images/ctf/sick-logo.png";
     import sectraLogo from "$lib/images/ctf/sectra-logo.png";
     import sylogLogo from "$lib/images/ctf/sylog-logo.png";
+    import DocumentLink from "$lib/components/DocumentLink.svelte";
+    import { base } from "$app/paths";
 </script>
 
 <svelte:head>
@@ -39,6 +41,10 @@
         <a href="https://forms.gle/8xsviDonwtGkZUsh7">
             https://forms.gle/8xsviDonwtGkZUsh7
         </a>
+    </p>
+    <p>
+        <strong>CTF rules:</strong>
+        <DocumentLink class="workshop" link={`${base}/documents/rules.pdf`} />
     </p>
 
     <hr />
