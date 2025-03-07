@@ -29,17 +29,11 @@
         All non-student participants have to bring their own laptops, but it's recommended that
         every participant brings their own, since we may not be able to provide Kali Linux images on site.
     </p>
-    <p><strong>Date:</strong> 17:15-22:00, March 8th, 2025</p>
+    <p><strong>Date:</strong> 17:15-23:00, March 8th, 2025 (Food will be served 16:15)</p>
     <p>
         <strong>Location:</strong>
         <a href="https://use.mazemap.com/?utm_medium=longurl#v=1&config=liu&campusid=742&zlevel=2&center=15.576432,58.398370&zoom=18&sharepoitype=poi&sharepoi=1002771474">
             Brandväggen, Bakdörren and ISYtan (Linköping University, Sweden)
-        </a>
-    </p>
-    <p>
-        <strong>Registration form:</strong>
-        <a href="https://forms.gle/8xsviDonwtGkZUsh7">
-            https://forms.gle/8xsviDonwtGkZUsh7
         </a>
     </p>
     <p>
