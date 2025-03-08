@@ -69,25 +69,25 @@
         <ContactCard
             fullName="Wilmer Segerstedt"
             hackerTag="airless"
-            position="Board member"
+            position="Webmaster"
             email="ledamot1@lithehax.se"
             image={member1Img} />
         <ContactCard
             fullName="Tove Haernfelt"
             hackerTag="thetov"
-            position="Board member"
+            position="Relations"
             email="ledamot2@lithehax.se"
             image={member2Img} />
         <ContactCard
             fullName="Anton Oom"
             hackerTag="oomega"
-            position="Board member"
+            position="Infomaster"
             email="ledamot3@lithehax.se"
             image={member3Img} />
         <ContactCard
             fullName="William Minidis"
             hackerTag="windis"
-            position="Board member"
+            position="Servermaster"
             email="ledamot4@lithehax.se"
             image={member4Img} />
     </div>
