@@ -1,0 +1,1 @@
+import"../chunks/disclose-version.Bg9kRutz.js";import{p as e,u as a,a as p}from"../chunks/runtime.08AHxySU.js";import{b as r}from"../chunks/paths.DK5egc_B.js";function i(t,o){e(o,!0),a(()=>{window.location.href=`${r}/events`}),p()}export{i as component};
