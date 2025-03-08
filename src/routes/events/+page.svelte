@@ -37,6 +37,12 @@
         </a>
     </p>
     <p>
+        <strong>CTF Platform:</strong>
+        <a href="https://ctf.lithehax.se">
+            ctf.lithehax.se
+        </a>
+    </p>
+    <p>
         <strong>CTF rules:</strong>
         <DocumentLink class="workshop" link={`${base}/documents/rules.pdf`} />
     </p>
