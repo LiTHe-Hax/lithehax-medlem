@@ -13,6 +13,7 @@
     import member2Img from "$lib/images/contacts/tove_h.jpg";
     import member3Img from "$lib/images/contacts/anton_o.jpg";
     import member4Img from "$lib/images/contacts/william_m.jpg";
+    import maskotImg from "$lib/images/contacts/torbjorn_h.png";
 </script>
 
 <svelte:head>
@@ -90,6 +91,12 @@
             position="Servermaster"
             email="ledamot4@lithehax.se"
             image={member4Img} />
+        <ContactCard
+            fullName="Torbjörn Hackström"
+            hackerTag="hacktor"
+            position="Maskot"
+            email="maskot@lithehax.se"
+            image={maskotImg} />
     </div>
 
     <h2>Organization details</h2>
