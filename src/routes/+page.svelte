@@ -105,8 +105,8 @@
 
     <h3>Documents</h3>
     <div class="document-list">
-        <DocumentLink link={`${base}/documents/Kallelse-Årsmote.pdf`} />
-        <DocumentLink link={`${base}/documents/LiTHe-Hax-Stadgar-Reviderade.pdf`} />
+        <DocumentLink link={`${base}/documents/Kallelse_Årsmöte.pdf`} />
+        <DocumentLink link={`${base}/documents/LiTHe_Hax_Stadgar_Uppdaterad.pdf`} />
         <DocumentLink link={`${base}/documents/LiTHe-Hax-Konstituerande-Protokoll.pdf`} />
     </div>
 </Section>
