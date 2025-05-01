@@ -13,27 +13,9 @@
     <title>LiTHe Hax - Events</title>
 </svelte:head>
 
-<Section isThin>
-    <h1>Placeholder event</h1>
+<h2>Upcoming Events</h2>
 
-    <img src={cyberRoom} alt="Cybersecurity Room" />
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae odio tortor. Ut molestie sit amet
-        dolor sed tincidunt. Vivamus at porttitor massa. Donec a malesuada elit. Aenean nunc dui, commodo quis 
-        elementum quis, pulvinar sed neque. Mauris in tellus finibus, eleifend risus finibus, pulvinar sem. 
-        Ut aliquam felis metus, ullamcorper elementum leo vehicula vestibulum.
-    </p>
-    <p>
-        Aliquam scelerisque leo eget quam pharetra, sed fermentum neque commodo. Etiam nec mauris hendrerit, ornare 
-        ex quis, aliquam mauris. Suspendisse vel sapien mauris.
-    </p>
-    <p>
-        Sed ultrices scelerisque massa vel molestie. Aenean vitae magna tristique, ultrices urna id, placerat sapien. 
-        Vivamus at hendrerit urna.
-    </p>
-</Section>
-
-
+<h2>Previous Events</h2>
 
 <Section isThin>
     <div class="past-event">
@@ -136,11 +118,11 @@
     }
 
     .past-event {
-        opacity: 0.2;
+        opacity: 0.5;
     }
 
     .past-event img {
-        filter: saturate(20%);
+        filter: saturate(50%);
     }
 
     .past-event h1 {
@@ -148,4 +130,9 @@
         color: var(--header-fg);
     }
 
+    h2 {
+        font-size: 1.8rem;
+        color: var(--header-fg);
+        text-align: center;
+    }
 </style>
