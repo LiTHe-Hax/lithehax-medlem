@@ -6,7 +6,10 @@
     import sylogLogo from "$lib/images/ctf/sylog-logo.png";
     import DocumentLink from "$lib/components/DocumentLink.svelte";
     import { base } from "$app/paths";
-    import studenthuset from "$lib/images/ctf/studenthuset.jpg";
+    import studenthuset from "$lib/images/workshop/studenthuset.jpg";
+    import foobar from "$lib/images/foocafe/foobar.jpg"
+    import gototenLogo from "$lib/images/foocafe/goto10-logo.png"
+    import foocafeLogo from "$lib/images/foocafe/foocafe-logo.svg"
 </script>
 
 <svelte:head>
@@ -16,6 +19,32 @@
 <h2 class="section-header">Upcoming Events</h2>
 
 <h2 class="section-header">Previous Events</h2>
+
+<Section isThin>
+    <div class="past-event">
+        <h1>Foo Bar at Foo Café</h1>
+
+        <img src={foobar} alt="Foo Bar at Foo Café" />
+        <p>
+            Foo Café and LiTHe Hax recently teamed up for a cybersecurity evening focused on Capture the Flag
+            challenges. The event featured a brief introduction, a problem-solving lecture, and a chance to network
+            over food and drinks with others passionate about cybersecurity.
+        </p>
+        <p><strong>Date & Time:</strong> 24 Apr 2025, 17:00-20:00</p>
+        <p>
+            <strong>Location:</strong>
+            <a href="https://maps.app.goo.gl/LNrr7CWQWwaH3deJ9">
+                Goto 10 Linköping (Teknikringen 7, 583 30 Linköping)
+            </a>
+        </p>
+
+        <hr />
+        <div class="sponsor-logos">
+            <img src={gototenLogo} alt="Goto 10 logo" />
+            <img src={foocafeLogo} alt="Goto 10 logo" />
+        </div>
+    </div>
+</Section>
 
 <Section isThin>
     <div class="past-event">
@@ -29,7 +58,7 @@
         <p>
             A total of 18 teams competed, each consisting of 2–5 participants. Free food was provided to all participants.
         </p>
-        <p><strong>Time & Date:</strong> 17:15-23:00, March 8th, 2025</p>
+        <p><strong>Date & Time:</strong> 8 Mar 2025, 17:15-23:00</p>
         <p>
             <strong>Location:</strong>
             <a href="https://use.mazemap.com/?utm_medium=longurl#v=1&config=liu&campusid=742&zlevel=2&center=15.576432,58.398370&zoom=18&sharepoitype=poi&sharepoi=1002771474">
@@ -60,14 +89,14 @@
 <Section isThin>
     <div class="past-event">
         <h1>Workshop</h1>
-        <img src={studenthuset} alt="studenthuset" />
+        <img src={studenthuset} alt="Studenthuset" />
         <p>
             We held a workshop in preparation for our CTF. During the workshop, we explained and showcased example challenges that resembled the actual CTF challenges.
         </p> 
         <p> 
             There were 80 available seats, and those who registered were provided free food, sponsored by the companies below.
         </p>
-        <p><strong>Time & Date:</strong> 17:15-20:00, February 27th, 2025</p>
+        <p><strong>Date & Time:</strong> 27 Feb 2025, 17:15-20:00</p>
         <p>
             <strong>Location:</strong>
             <a href="https://use.mazemap.com/#v=1&config=liu&campusid=742&zlevel=6&center=15.577904,58.397057&zoom=18.9&sharepoitype=poi&sharepoi=1000927265">
