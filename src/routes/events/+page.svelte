@@ -23,19 +23,13 @@
 
         <img src={cyberRoom} alt="Cybersecurity Room" />
         <p>
-            The LiTHe Hax CTF Event is an exciting competition taking place on March 8, bringing cybersecurity enthusiasts
-            together to test their skills and tackle challenging Capture the Flag tasks. We host this event to encourage
-            cybersecurity awareness within the student community, as it is both highly relevant and incredibly fun!
+            The LiTHe Hax LiU CTF was an exciting Capture the Flag competition held on March 8. We hosted this event to
+            promote cybersecurity awareness within the student community, combining both relevance and fun.
         </p>
         <p>
-            A total of 30 teams will be able to compete. Each team can consist of 2-5 participants, of which one must be
-            a member in LiTHe Hax. Free food will be provided to each participant.
+            A total of 18 teams competed, each consisting of 2–5 participants. Free food was provided to all participants.
         </p>
-        <p>
-            All non-student participants have to bring their own laptops, but it's recommended that
-            every participant brings their own, since we may not be able to provide Kali Linux images on site.
-        </p>
-        <p><strong>Date:</strong> 17:15-23:00, March 8th, 2025 (Food will be served 16:15)</p>
+        <p><strong>Time & Date:</strong> 17:15-23:00, March 8th, 2025</p>
         <p>
             <strong>Location:</strong>
             <a href="https://use.mazemap.com/?utm_medium=longurl#v=1&config=liu&campusid=742&zlevel=2&center=15.576432,58.398370&zoom=18&sharepoitype=poi&sharepoi=1002771474">
@@ -73,7 +67,7 @@
         <p> 
             There were 80 available seats, and those who registered were provided free food, sponsored by the companies below.
         </p>
-        <p><strong>Date:</strong> 17:15-20:00, February 27th, 2025</p>
+        <p><strong>Time & Date:</strong> 17:15-20:00, February 27th, 2025</p>
         <p>
             <strong>Location:</strong>
             <a href="https://use.mazemap.com/#v=1&config=liu&campusid=742&zlevel=6&center=15.577904,58.397057&zoom=18.9&sharepoitype=poi&sharepoi=1000927265">
