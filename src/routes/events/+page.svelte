@@ -13,9 +13,9 @@
     <title>LiTHe Hax - Events</title>
 </svelte:head>
 
-<h2>Upcoming Events</h2>
+<h2 class="section-header">Upcoming Events</h2>
 
-<h2>Previous Events</h2>
+<h2 class="section-header">Previous Events</h2>
 
 <Section isThin>
     <div class="past-event">
@@ -130,9 +130,26 @@
         color: var(--header-fg);
     }
 
-    h2 {
-        font-size: 1.8rem;
-        color: var(--header-fg);
-        text-align: center;
+    /* Mobile styling */
+    @media screen and (min-width: 0px) {
+        .section-header {
+            font-size: 1.75rem;
+            color: var(--heading-fg);
+            margin: 1rem 1.25rem;
+            max-width: min(36rem, calc(100% - 6rem));
+        }
     }
-</style>
+
+    /* Desktop styling */
+    @media screen and (min-width: 768px) {
+        .section-header {
+            font-size: 1.75rem;
+            color: var(--heading-fg);
+            margin-top: 3rem;
+            margin-bottom: -2rem;
+            margin-left: calc(50% - min(18rem, 50% - 3rem) - 1.25rem); /* This feels very hacky */
+            max-width: min(36rem, calc(100% - 6rem));
+        }
+    }
+
+    </style>
