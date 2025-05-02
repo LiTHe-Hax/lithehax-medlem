@@ -10,6 +10,7 @@
     import foobar from "$lib/images/foocafe/foobar.jpg";
     import gototenLogo from "$lib/images/foocafe/goto10-logo.png";
     import foocafeLogo from "$lib/images/foocafe/foocafe-logo.svg";
+    import acas from "$lib/images/annual-meeting/acas.png";
 </script>
 
 <svelte:head>
@@ -20,7 +21,7 @@
 
 <Section isThin>
     <h1>Annual Meeting</h1>
-    <!-- TODO: add some photo here -->
+    <img src={acas} alt="ACAS at Linköping University" />
     <p>
         We will be holding our annual meeting soon, which you're very welcome to
         attend! During the meeting we'll talk about the last year of LiTHe Hax
