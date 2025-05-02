@@ -30,10 +30,6 @@
         chance to join and affect the future of LiTHe Hax.
     </p>
     <p>Coffee and fika will be provided for everyone who attend the meeting.</p>
-    <p>
-        <strong>Agenda:</strong>
-        <DocumentLink link={`${base}/documents/Kallelse_Årsmöte.pdf`} />
-    </p>
     <p><strong>Date & Time:</strong> 28 May 2025, 17:15</p>
     <p>
         <strong>Location:</strong>
@@ -42,6 +38,10 @@
         >
             ACAS (Linköping University, Sweden)
         </a>
+    </p>
+    <p>
+        <strong>Agenda:</strong>
+        <DocumentLink link={`${base}/documents/Kallelse_Årsmöte.pdf`} />
     </p>
 </Section>
 
@@ -65,6 +65,10 @@
             <a href="https://maps.app.goo.gl/LNrr7CWQWwaH3deJ9">
                 Goto 10 Linköping (Teknikringen 7, 583 30 Linköping)
             </a>
+        </p>
+        <p>
+            <strong>Presentation:</strong>
+            <DocumentLink link={`${base}/documents/GOTO10 Presentation.pptx`} />
         </p>
 
         <hr />
