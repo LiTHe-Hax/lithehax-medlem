@@ -28,12 +28,12 @@
         voted on is who will be included in the next board, so this is your
         chance to join and affect the future of LiTHe Hax.
     </p>
+    <p>Coffee and fika will be provided for everyone who attend the meeting.</p>
     <p>
         <strong>Agenda:</strong>
         <DocumentLink link={`${base}/documents/Kallelse_Årsmöte.pdf`} />
     </p>
     <p><strong>Date & Time:</strong> 28 May 2025, 17:15</p>
-    <!-- TODO: add location when it's decided
     <p>
         <strong>Location:</strong>
         <a
@@ -42,7 +42,6 @@
             ACAS (Linköping University, Sweden)
         </a>
     </p>
-    -->
 </Section>
 
 <h2 class="section-header">Previous Events</h2>
