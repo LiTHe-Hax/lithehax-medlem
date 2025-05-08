@@ -1,0 +1,8 @@
+// This stylesheet contains mixins for common sets of styles that can be used in other stylesheets.
+
+// Makes it easier to set the same timing function and duration for multiple properties.
+@mixin transition($timing-function, $duration, $properties...) {
+	transition-property: $properties;
+	transition-duration: $duration;
+	transition-timing-function: $timing-function;
+}

@@ -1,0 +1,35 @@
+// This stylesheet contains styles that apply to the whole website.
+
+@use "colors.scss";
+@use "mixins.scss";
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: colors.$bg-1;
+	color: colors.$fg;
+	font-family: sans-serif;
+}
+
+a {
+	@include mixins.transition(ease-out, 150ms, color, fill);
+
+	color: colors.$green-2;
+	fill: colors.$green-2;
+	text-decoration: none;
+
+	&:hover {
+		color: colors.$green-3;
+		fill: colors.$green-3;
+	}
+
+	> svg {
+		fill: inherit;
+		transition: inherit;
+	}
+}
+
+hr {
+	margin: 1rem 0;
+	border: 1px solid colors.$gray-4;
+}
