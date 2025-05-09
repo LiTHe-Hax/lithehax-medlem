@@ -1,70 +1,83 @@
 <script lang="ts">
-    type Props = {
-        fullName: string,
-        hackerTag: string,
-        position: string,
-        email?: string,
-        image?: string,
-    };
-    let { fullName, hackerTag, position, email, image }: Props = $props();
+	import placeholderImage from "$lib/images/contacts/placeholder.png";
 
-    import placeholderImg from "$lib/images/contacts/placeholder.png";
+	interface ContactCardProps {
+		fullName: string;
+		hackerTag: string;
+		position: string;
+		email?: string;
+		image?: string;
+	}
+
+	let { fullName, hackerTag, position, email, image }: ContactCardProps = $props();
 </script>
 
 <div class="contact-card">
-    <img src={image !== undefined ? image : placeholderImg} alt={fullName} />
-    <div class="info">
-        <span class="name">{fullName} @{hackerTag}</span>
-        <span class="position">{position}</span>
-        {#if email !== undefined}
-            <a class="email" href={`mailto:${email}`}>{email}</a>
-        {:else}
-            <span class="email">(mail coming soon)</span>
-        {/if}
-    </div>
+	<img src={image ? image : placeholderImage} alt={fullName} />
+
+	<div class="info">
+		<div class="names">
+			<span>{fullName}</span>
+			<span>@{hackerTag}</span>
+		</div>
+		<span class="position">{position}</span>
+		{#if email}
+			<a class="email" href={`mailto:${email}`}>{email}</a>
+		{:else}
+			<span class="email">(mail coming soon)</span>
+		{/if}
+	</div>
 </div>
 
-<style>
-    .contact-card {
-        display: flex;
-        flex-direction: row;
-        gap: 0.5rem;
-    }
+<style lang="scss">
+	@use "$lib/styles/colors.scss";
 
-    img {
-        width: 8rem;
-        height: 8rem;
-        border-radius: 50%;
-    }
+	@mixin ellipsized-text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-wrap: nowrap;
+	}
 
-    .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-width: 0; /* Makes info box take only remaining space when small */
-    }
+	.contact-card {
+		display: flex;
+		flex-direction: row;
+		gap: 0.5rem;
 
-    .name {
-        color: var(--heading-fg);
-        font-size: 1.175em;
-        font-weight: bold;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+		img {
+			border-radius: 50%;
+			width: 8rem;
+			height: 8rem;
+		}
 
-    .position {
-        margin-bottom: 1em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+		.info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-width: 0; // Makes info box only take up remaining space when small
 
-    .email {
-        /* Clamps the boundaries of the link */
-        width: 100%;
-        align-self: flex-start;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+			.names {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				column-gap: 0.5ch;
+				color: colors.$green-2;
+				font-size: 1.175em;
+				font-weight: bold;
 
-    /* Email link is also styled by the global stylesheet */
+				span {
+					@include ellipsized-text;
+				}
+			}
+
+			.position {
+				@include ellipsized-text;
+
+				margin-bottom: 1em;
+			}
+
+			.email {
+				@include ellipsized-text;
+			}
+		}
+	}
 </style>
