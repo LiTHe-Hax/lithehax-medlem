@@ -4,12 +4,13 @@
 	interface SectionProps {
 		children?: Snippet;
 		isThin?: boolean;
+		isTranslucent?: boolean;
 	}
 
-	let { children, isThin }: SectionProps = $props();
+	let { children, isThin, isTranslucent }: SectionProps = $props();
 </script>
 
-<section class={[isThin && "thin"]}>
+<section class={[isThin && "thin", isTranslucent && "translucent"]}>
 	{#if children}
 		{@render children()}
 	{/if}
@@ -18,6 +19,7 @@
 <style lang="scss">
 	@use "$lib/styles/colors.scss";
 	@use "$lib/styles/sizes.scss";
+	@use "$lib/styles/mixins.scss";
 
 	section {
 		border-radius: 0.5rem;
@@ -39,6 +41,26 @@
 				box-sizing: border-box; // Needed for the fake margin to work correctly
 				margin: $margin auto;
 				max-width: min(39rem, calc(100% - $margin * 2)); // Fakes a horizontal margin
+			}
+		}
+
+		&.translucent {
+			> :global(*) {
+				@include mixins.transition(ease-out, 150ms, opacity);
+				opacity: 0.5;
+			}
+
+			&:hover > :global(*) {
+				opacity: 1;
+			}
+
+			> :global(img) {
+				@include mixins.transition(ease-out, 150ms, opacity, filter);
+				filter: saturate(50%);
+			}
+
+			&:hover > :global(*) {
+				filter: saturate(100%);
 			}
 		}
 
