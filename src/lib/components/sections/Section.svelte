@@ -27,20 +27,18 @@
 		color: colors.$fg;
 
 		@media screen and (max-width: sizes.$max-mobile-width) {
-			margin: 1rem;
+			margin: 1rem 0;
 			padding: 1rem;
 		}
 
 		@media screen and (min-width: sizes.$min-desktop-width) {
-			$margin: 3rem;
-
-			margin: $margin;
+			margin: 3rem 0;
 			padding: 1.5rem;
 
 			&.thin {
-				box-sizing: border-box; // Needed for the fake margin to work correctly
-				margin: $margin auto;
-				max-width: min(39rem, calc(100% - $margin * 2)); // Fakes a horizontal margin
+				box-sizing: border-box; // Makes the specified max-width the actual max width
+				margin: 3rem auto;
+				max-width: 39rem;
 			}
 		}
 
@@ -64,15 +62,6 @@
 			}
 		}
 
-		// Ensures that there are no unnecessarily large gaps at top or bottom
-		> :global(*) {
-			&:first-child {
-				margin-top: 0;
-			}
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
+		@include mixins.remove-child-top-bottom-margins();
 	}
 </style>

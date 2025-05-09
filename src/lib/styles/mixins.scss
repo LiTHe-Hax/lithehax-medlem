@@ -6,3 +6,16 @@
 	transition-duration: $duration;
 	transition-timing-function: $timing-function;
 }
+
+// Ensures that there are no unnecessarily large gaps at top or bottom
+@mixin remove-child-top-bottom-margins() {
+	> :global(*) {
+		&:first-child {
+			margin-top: 0 !important;
+		}
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+}

@@ -193,6 +193,17 @@
 	}
 
 	main {
+		box-sizing: border-box;
 		width: 100lvw;
+
+		@media screen and (max-width: sizes.$max-mobile-width) {
+			padding: 1rem;
+		}
+
+		@media screen and (min-width: sizes.$min-desktop-width) {
+			padding: 3rem;
+		}
+
+		@include mixins.remove-child-top-bottom-margins();
 	}
 </style>
