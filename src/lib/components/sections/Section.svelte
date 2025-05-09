@@ -27,18 +27,17 @@
 		color: colors.$fg;
 
 		@media screen and (max-width: sizes.$max-mobile-width) {
-			margin: 1rem 0;
+			margin: sizes.$mobile-section-spacing 0;
 			padding: 1rem;
 		}
 
 		@media screen and (min-width: sizes.$min-desktop-width) {
-			margin: 3rem 0;
+			margin: sizes.$desktop-section-spacing auto;
 			padding: 1.5rem;
 
 			&.thin {
 				box-sizing: border-box; // Makes the specified max-width the actual max width
-				margin: 3rem auto;
-				max-width: 39rem;
+				max-width: sizes.$thin-section-max-width;
 			}
 		}
 
