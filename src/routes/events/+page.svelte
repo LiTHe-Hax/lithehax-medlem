@@ -11,11 +11,13 @@
   import gototenLogo from "$lib/images/foocafe/goto10-logo.png";
   import foocafeLogo from "$lib/images/foocafe/foocafe-logo.svg";
   import acas from "$lib/images/annual-meeting/acas.png";
+  import PageHead from "$lib/components/PageHead.svelte";
 </script>
 
-<svelte:head>
-  <title>LiTHe Hax - Events</title>
-</svelte:head>
+<PageHead
+  title="Events"
+  description="LiTHe Hax events including Annual Meeting, CTF competition, workshops, and networking opportunities at Linköping University, GOTO10, Foocafe and more"
+/>
 
 <h2 class="section-header">Upcoming Events</h2>
 
