@@ -2,6 +2,7 @@
     import FormSubmit from "$lib/components/FormSubmit.svelte";
     import FormField from "$lib/components/FormField.svelte";
     import Section from "$lib/components/Section.svelte";
+    import PageHead from "$lib/components/PageHead.svelte";
     import { createMember } from "$lib/api/member";
     import type { AxiosError, AxiosResponse } from "axios";
 
@@ -62,9 +63,7 @@
     }
 </script>
 
-<svelte:head>
-    <title>LiTHe Hax - Member</title>
-</svelte:head>
+<PageHead title="Member" description="Join LiTHe Hax and gain access to exclusive events, resources, and updates - become a member today!" />
 
 <Section isThin>
     <h1>Become a member</h1>

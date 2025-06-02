@@ -1,5 +1,6 @@
 <script lang="ts">
     import Section from "$lib/components/Section.svelte";
+    import PageHead from "$lib/components/PageHead.svelte";
 
     type LeaderboardRow = [string, string];
     let leaderboardRows = $state<LeaderboardRow[] | undefined>(undefined);
@@ -55,9 +56,10 @@
     });
 </script>
 
-<svelte:head>
-    <title>LiTHe Hax - Christmas 2024</title>
-</svelte:head>
+<PageHead
+    title="Christmas 2024"
+    description="Leaderboard for the LiTHe Hax Christmas CTF 2024 competition."
+/>
 
 <Section isThin>
     <h1>Christmas CTF 2024 Leaderboard</h1>
