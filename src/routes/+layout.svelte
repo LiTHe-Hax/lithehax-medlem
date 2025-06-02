@@ -2,8 +2,21 @@
     import "$lib/styles/global.css"; // This stylesheet affects the entire site.
     import LayoutHeader from "$lib/components/LayoutHeader.svelte";
 
-    let { children } = $props();
+    interface LayoutProps {
+        children: any;
+        data: {
+            canonicalHref: string;
+        };
+    }
+
+    // In Runes mode, we extract our data using $props()
+    let { children, data } = $props() as LayoutProps;
 </script>
+
+<svelte:head>
+    <link rel="canonical" href="{data.canonicalHref}" />
+    <meta property="og:url" content="{data.canonicalHref}">
+</svelte:head>
 
 <LayoutHeader />
 
