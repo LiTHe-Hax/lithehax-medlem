@@ -4,6 +4,7 @@
     import ContactCard from "$lib/components/ContactCard.svelte";
     import DocumentLink from "$lib/components/DocumentLink.svelte";
     import Section from "$lib/components/Section.svelte";
+    import PageHead from "$lib/components/PageHead.svelte";
 
     import chairmanImg from "$lib/images/contacts/tyson_h.jpg";
     import cashierImg from "$lib/images/contacts/lukas_w.jpg";
@@ -16,9 +17,10 @@
     import maskotImg from "$lib/images/contacts/torbjorn_h.png";
 </script>
 
-<svelte:head>
-    <title>LiTHe Hax</title>
-</svelte:head>
+<PageHead
+    title=""
+    description="LiTHe Hax is an independent student association at Linköping University focused on ethical hacking and cybersecurity."
+/>
 
 <Section>
     <h1>About us</h1>
