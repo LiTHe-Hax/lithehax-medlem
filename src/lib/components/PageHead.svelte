@@ -1,8 +1,14 @@
 <script lang="ts">
-    export let title: string;
-    export let description: string;
+    import type { Snippet } from "svelte";
 
-    const effectiveTitle = title ? `LiTHe Hax - ${title}` : 'LiTHe Hax';
+    type Props = {
+        children?: Snippet<[]>;
+        title: string;
+        description: string;
+    };
+
+    const { children, title, description }: Props = $props();
+    const effectiveTitle = $derived(title ? `LiTHe Hax - ${title}` : 'LiTHe Hax');
 </script>
 
 <svelte:head>
@@ -14,5 +20,7 @@
     <meta property="og:image:alt" content="LiTHe Hax">
     <meta property="og:site_name" content="LiTHe Hax">
     <meta property="og:type" content="website">
-    <slot />
+    {#if children}
+        {@render children()}
+    {/if}
 </svelte:head>
