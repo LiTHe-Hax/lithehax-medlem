@@ -1,8 +1,6 @@
 name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches: 'main'
+on: push
 
 jobs:
   build_site:
@@ -31,6 +29,7 @@ jobs:
           # this should match the `pages` option in your adapter-static options
           path: 'build/'
   deploy:
+    if: github.ref == 'refs/heads/main'
     needs: build_site
     runs-on: ubuntu-latest
     permissions:
