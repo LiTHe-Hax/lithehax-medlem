@@ -7,8 +7,8 @@
     import PageHead from "$lib/components/PageHead.svelte";
 
     import chairmanImg from "$lib/images/contacts/tyson_h.jpg";
-    import cashierImg from "$lib/images/contacts/lukas_w.jpg";
-    import secretaryImg from "$lib/images/contacts/viktor_h.jpg";
+    import webmasterImg from "$lib/images/contacts/viktor_h.jpg";
+    import secretaryImg from "$lib/images/contacts/david_s.png";
     import accountantImg from "$lib/images/contacts/adam_b.jpg";
     import member1Img from "$lib/images/contacts/wilmer_s.jpg";
     import member2Img from "$lib/images/contacts/tove_h.jpg";
@@ -46,23 +46,29 @@
     <h2>Contact</h2>
     <div class="contact-grid">
         <ContactCard
-            fullName="Isak/Tyson Horvath"
-            hackerTag="Tavro"
+            fullName="Tyson Horvath"
+            hackerTag="tavro"
             position="Chairman"
             email="ordforande@lithehax.se"
             image={chairmanImg} />
         <ContactCard
-            fullName="Lukas Wandel"
-            hackerTag="DominoFives"
-            position="Cashier"
-            email="kassor@lithehax.se"
-            image={cashierImg} />
-        <ContactCard
-            fullName="Viktor Holta"
-            hackerTag="Parslie"
+            fullName="David Smith"
+            hackerTag="smittydata"
             position="Secretary"
             email="sekreterare@lithehax.se"
             image={secretaryImg} />
+        <ContactCard
+            fullName="Tom Englund"
+            hackerTag="naturell"
+            position="Board member"
+            email="tom.englund@lithehax.se"
+            image={undefined} />
+        <ContactCard
+            fullName="Viktor Holta"
+            hackerTag="Parslie"
+            position="Webmaster"
+            email="webmaster@lithehax.se"
+            image={webmasterImg} />
         <ContactCard
             fullName="Adam Bohman"
             hackerTag="Whiibie"
@@ -72,26 +78,26 @@
         <ContactCard
             fullName="Wilmer Segerstedt"
             hackerTag="airless"
-            position="Webmaster"
-            email="ledamot1@lithehax.se"
+            position="Logistics"
+            email="wilmer.segerstedt@lithehax.se"
             image={member1Img} />
         <ContactCard
             fullName="Tove Haernfelt"
             hackerTag="thetov"
-            position="Relations"
-            email="ledamot2@lithehax.se"
+            position="Event manager"
+            email="tove.haernfelt@lithehax.se"
             image={member2Img} />
         <ContactCard
             fullName="Anton Oom"
             hackerTag="oomega"
-            position="Infomaster"
-            email="ledamot3@lithehax.se"
+            position="Relations"
+            email="anton.oom@lithehax.se"
             image={member3Img} />
         <ContactCard
             fullName="William Minidis"
             hackerTag="windis"
-            position="Servermaster"
-            email="ledamot4@lithehax.se"
+            position="Cashier"
+            email="kassor@lithehax.se"
             image={member4Img} />
         <ContactCard
             fullName="Torbjörn Hackström"
