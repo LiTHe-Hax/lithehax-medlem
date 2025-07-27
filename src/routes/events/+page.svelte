@@ -22,74 +22,80 @@
 <h2 class="section-header">Upcoming Events</h2>
 
 <Section isThin>
-  <h1>Annual Meeting</h1>
-  <img src={acas} alt="ACAS at Linköping University" />
-  <p>
-    We will be holding our annual meeting soon, which you're very welcome to
-    attend! During the meeting we'll talk about the last year of LiTHe Hax and
-    we'll be voting on the next year of LiTHe Hax. One thing that'll be voted on
-    is who will be included in the next board, so this is your chance to join
-    and affect the future of LiTHe Hax.
-  </p>
-  <p>Coffee and fika will be provided to everyone who attend the meeting.</p>
-  <p><strong>Date & Time:</strong> 28 May 2025, 17:15</p>
-  <p>
-    <strong>Location:</strong>
-    <a
-      href="https://use.mazemap.com/?utm_medium=longurl#v=1&config=liu&campusid=742&zlevel=2&center=15.576810,58.402255&zoom=18&sharepoitype=poi&sharepoi=1000927810"
-    >
-      ACAS (Linköping University, Sweden)
-    </a>
-  </p>
-  <p>
-    <strong>Agenda:</strong>
-    <DocumentLink link={`${base}/documents/Kallelse_Årsmöte.pdf`} />
-  </p>
-
-  <h3>Candidacy</h3>
-  <p>
-    Anyone can can run for the positions brought up during the meeting. You can
-    oppose any of the current nominees, which means that you can nominate
-    yourself or someone else for that position (without having been previously
-    nominated). You can also submit an opposition by sending a mail to <a
-      href="mailto:ordforande@lithehax.se">ordforande@lithehax.se</a
-    >, where you explain which position you're interested in and why you are a
-    suitable candidate.
-  </p>
-  <p>
-    If you are running for a position in the board you will have to present
-    yourself during the meeting and answer any potential questions. Below are
-    some suggestions of what you may want to bring up when presenting yourself:
-  </p>
-  <ul>
-    <li>Who you are</li>
-    <li>Why you are running for the position</li>
-    <li>Past experiences that may be of relevance</li>
-  </ul>
-  <p>
-    <strong>Current nominees:</strong>
-    <DocumentLink
-      link={`${base}/documents/2024-2025/events/annual_meeting/nominations.pdf`}
-    />
-  </p>
-
-  <h3>Motions</h3>
-
-  <p>
-    Anyone can send in motions. The easiest way to do this is by mailing the
-    motion to <a href="mailto:ordforande@lithehax.se">ordforande@lithehax.se</a
-    >. Motions must be sent in writing to the board no later than seven days
-    before the meeting (21 May 2025).
-  </p>
-  <p>
-    <strong>Current motions and propositions:</strong>
-    <DocumentLink
-      link={`${base}/documents/2024-2025/events/annual_meeting/motions_and_propositions.pdf`}
-    />
-  </p>
+  <p>There are currently no upcoming events...</p>
 </Section>
 
 <h2 class="section-header">Previous Events</h2>
+
+<Section isThin>
+  <div class="past-event">
+    <h1>Annual Meeting</h1>
+    <img src={acas} alt="ACAS at Linköping University" />
+    <p>
+      We will be holding our annual meeting soon, which you're very welcome to
+      attend! During the meeting we'll talk about the last year of LiTHe Hax and
+      we'll be voting on the next year of LiTHe Hax. One thing that'll be voted on
+      is who will be included in the next board, so this is your chance to join
+      and affect the future of LiTHe Hax.
+    </p>
+    <p>Coffee and fika will be provided to everyone who attend the meeting.</p>
+    <p><strong>Date & Time:</strong> 28 May 2025, 17:15</p>
+    <p>
+      <strong>Location:</strong>
+      <a
+        href="https://use.mazemap.com/?utm_medium=longurl#v=1&config=liu&campusid=742&zlevel=2&center=15.576810,58.402255&zoom=18&sharepoitype=poi&sharepoi=1000927810"
+      >
+        ACAS (Linköping University, Sweden)
+      </a>
+    </p>
+    <p>
+      <strong>Agenda:</strong>
+      <DocumentLink link={`${base}/documents/Kallelse_Årsmöte.pdf`} />
+    </p>
+
+    <h3>Candidacy</h3>
+    <p>
+      Anyone can can run for the positions brought up during the meeting. You can
+      oppose any of the current nominees, which means that you can nominate
+      yourself or someone else for that position (without having been previously
+      nominated). You can also submit an opposition by sending a mail to <a
+        href="mailto:ordforande@lithehax.se">ordforande@lithehax.se</a
+      >, where you explain which position you're interested in and why you are a
+      suitable candidate.
+    </p>
+    <p>
+      If you are running for a position in the board you will have to present
+      yourself during the meeting and answer any potential questions. Below are
+      some suggestions of what you may want to bring up when presenting yourself:
+    </p>
+    <ul>
+      <li>Who you are</li>
+      <li>Why you are running for the position</li>
+      <li>Past experiences that may be of relevance</li>
+    </ul>
+    <p>
+      <strong>Current nominees:</strong>
+      <DocumentLink
+        link={`${base}/documents/2024-2025/events/annual_meeting/nominations.pdf`}
+      />
+    </p>
+
+    <h3>Motions</h3>
+
+    <p>
+      Anyone can send in motions. The easiest way to do this is by mailing the
+      motion to <a href="mailto:ordforande@lithehax.se">ordforande@lithehax.se</a
+      >. Motions must be sent in writing to the board no later than seven days
+      before the meeting (21 May 2025).
+    </p>
+    <p>
+      <strong>Current motions and propositions:</strong>
+      <DocumentLink
+        link={`${base}/documents/2024-2025/events/annual_meeting/motions_and_propositions.pdf`}
+      />
+    </p>
+  </div>
+</Section>
 
 <Section isThin>
   <div class="past-event">
