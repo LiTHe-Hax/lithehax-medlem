@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     type Props = { link: string };
     let { link }: Props = $props();
 
@@ -33,4 +33,4 @@
         border-radius: 0.2rem;
         background-color: var(--link-btn-bg);
     }
-</style>
+</style> -->

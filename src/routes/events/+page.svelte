@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
   import Section from "$lib/components/Section.svelte";
   import cyberRoom from "$lib/images/ctf/cyber-room.jpg";
   import sickLogo from "$lib/images/ctf/sick-logo.png";
@@ -267,3 +267,4 @@
     }
   }
 </style>
+ -->

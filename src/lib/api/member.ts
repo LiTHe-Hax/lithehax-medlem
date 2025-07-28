@@ -1,4 +1,4 @@
-import request from "./request";
+/* import request from "./request";
 
 function createMember(firstName: string, lastName: string, email: string, isStudent: boolean) {
     const data = {
@@ -10,4 +10,4 @@ function createMember(firstName: string, lastName: string, email: string, isStud
     return request("members/", "post", data);
 }
 
-export { createMember };
+export { createMember }; */

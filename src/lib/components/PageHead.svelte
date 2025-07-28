@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { PUBLIC_BASE_URL } from "$env/static/public";
     import type { Snippet } from "svelte";
 
@@ -24,4 +24,4 @@
     {#if children}
         {@render children()}
     {/if}
-</svelte:head>
+</svelte:head> -->

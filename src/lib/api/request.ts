@@ -1,4 +1,4 @@
-import axios from "axios";
+/* import axios from "axios";
 import { dev } from "$app/environment";
 
 const DEVELOPMENT_URL = "http://localhost:8000/";
@@ -22,4 +22,4 @@ function request(url: string, method: Method, data?: Json) {
   });
 }
 
-export default request;
+export default request; */

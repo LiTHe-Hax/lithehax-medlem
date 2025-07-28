@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import Section from "$lib/components/Section.svelte";
     import PageHead from "$lib/components/PageHead.svelte";
 
@@ -161,4 +161,4 @@
     td:not(:last-child) {
         border-right: none;
     }
-</style>
+</style> -->

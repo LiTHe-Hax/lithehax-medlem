@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     type Props = {
         fullName: string,
         hackerTag: string,
@@ -67,4 +67,4 @@
     }
 
     /* Email link is also styled by the global stylesheet */
-</style>
+</style> -->

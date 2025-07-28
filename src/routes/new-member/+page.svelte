@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import FormSubmit from "$lib/components/FormSubmit.svelte";
     import FormField from "$lib/components/FormField.svelte";
     import Section from "$lib/components/Section.svelte";
@@ -119,4 +119,4 @@
         color: var(--error-color);
         text-align: center;
     }
-</style>
+</style> -->

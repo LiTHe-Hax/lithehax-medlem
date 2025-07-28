@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import type { Snippet } from "svelte";
 
     type InputType = "text" | "email" | "select" | "submit";
@@ -115,4 +115,4 @@
         border-bottom-color: transparent;
         border-left-color: transparent;
     }
-</style>
+</style> -->

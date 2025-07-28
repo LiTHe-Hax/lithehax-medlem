@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import type { Snippet } from "svelte";
 
     type Props = { disabled?: boolean, children?: Snippet };
@@ -30,4 +30,4 @@
         color: var(--button-hover-fg);
         transform: scaley(1.1);
     }
-</style>
+</style> -->

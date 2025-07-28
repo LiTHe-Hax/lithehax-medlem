@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import "$lib/styles/global.css"; // This stylesheet affects the entire site.
     import LayoutHeader from "$lib/components/LayoutHeader.svelte";
 
@@ -27,3 +27,4 @@
         width: 100vw;
     }
 </style>
+ -->

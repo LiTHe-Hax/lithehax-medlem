@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import type { Snippet } from "svelte";
 
     type Props = { children: Snippet, isThin?: boolean };
@@ -44,4 +44,4 @@
     section > :global(:is(h1, h2, h3, h4, h5, h6)) {
         color: var(--heading-fg);
     }
-</style>
+</style> -->
