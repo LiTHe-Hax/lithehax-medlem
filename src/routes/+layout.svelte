@@ -77,6 +77,12 @@
 				color: color.$green-2;
 				font-family: fa-solid;
 				font-size: 2rem;
+				cursor: pointer;
+				transition: color 150ms ease-out;
+
+				&:hover {
+					color: color.$green-3;
+				}
 			}
 
 			img {
@@ -127,6 +133,11 @@
 					font-weight: bold;
 					line-height: 1;
 					text-decoration: none;
+					transition: color 150ms ease-out;
+
+					&:hover {
+						color: color.$green-3;
+					}
 				}
 			}
 		}
