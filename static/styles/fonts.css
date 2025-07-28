@@ -1,0 +1,9 @@
+@font-face {
+	font-family: fa-solid;
+	src: url("../fonts/font-awesome/fa-solid-900.woff2");
+}
+
+@font-face {
+	font-family: fa-brands;
+	src: url("../fonts/font-awesome/fa-brands-400.woff2");
+}
