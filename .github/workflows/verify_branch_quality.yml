@@ -1,0 +1,27 @@
+name: Verify branch quality
+# Verifies that a branch is of sufficient quality to be merged into main
+
+on:
+  push:
+    branches:
+      - "**"
+      - "!main"
+
+jobs:
+  verify-buildability:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "package.json" # Uses the node version specified under "engines"
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+        env:
+          # These can be whatever since this is just a test build
+          BASE_PATH: ""
+          PUBLIC_BASE_URL: "https://fake.url"
