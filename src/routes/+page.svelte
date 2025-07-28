@@ -14,6 +14,7 @@
     import member2Img from "$lib/images/contacts/tove_h.jpg";
     import member3Img from "$lib/images/contacts/anton_o.jpg";
     import member4Img from "$lib/images/contacts/william_m.jpg";
+    import member5Img from "$lib/images/contacts/tom_e.jpg";
     import maskotImg from "$lib/images/contacts/torbjorn_h.png";
 </script>
 
@@ -62,7 +63,7 @@
             hackerTag="naturell"
             position="Board member"
             email="tom.englund@lithehax.se"
-            image={undefined} />
+            image={member5Img} />
         <ContactCard
             fullName="Viktor Holta"
             hackerTag="Parslie"
