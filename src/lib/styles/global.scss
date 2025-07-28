@@ -1,0 +1,35 @@
+@use "color.scss";
+
+body {
+	margin: 0;
+	padding: 0;
+	background: color.$black-1;
+	color: color.$white;
+	font-family: sans-serif;
+}
+
+/*
+TODO: turn these into components
+
+a {
+    color: var(--link-fg);
+    text-decoration: none;
+    transition: color 150ms ease-out;
+    fill: var(--link-fg);
+}
+
+a:hover {
+    color: var(--link-hover-fg);
+    fill: var(--link-hover-fg);
+}
+
+a > svg {
+    fill: inherit;
+    transition: fill 150ms ease-out;
+}
+
+hr {
+    border-color: var(--separator-color);
+    border-style: solid;
+    margin: 1rem 0;
+} */
