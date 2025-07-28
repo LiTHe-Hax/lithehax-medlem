@@ -1,36 +1,51 @@
-<!-- <script lang="ts">
-    type Props = { link: string };
-    let { link }: Props = $props();
+<script lang="ts">
+	type Props = { href: string };
+	const { href }: Props = $props();
 
-    function deriveLabel() {
-        let splitLink = link.split("/");
-        return splitLink[splitLink.length - 1];
-    }
+	function deriveLabel() {
+		const splitHref = href.split("/");
+		return splitHref[splitHref.length - 1];
+	}
 
-    const label = $derived(deriveLabel());
-    const icon = "📄"; // TODO: switch to SVG?
+	function deriveIcon() {
+		const splitHref = href.split(".");
+		const extension = splitHref[splitHref.length - 1];
+		switch (extension) {
+			case "pdf":
+				return "";
+			case "pptx":
+				return "";
+			case "7z":
+			case "zip":
+				return "";
+			default:
+				return "";
+		}
+	}
+
+	const label = $derived.by(deriveLabel);
+	const icon = $derived.by(deriveIcon);
 </script>
 
-<span>
-    <a href={link}>
-        <span class="icon">{icon}</span>
-        <span class="label">{label}</span>
-    </a>
-</span>
+<a {href}>{icon} {label}</a>
 
-<style>
-    a {
-        display: inline-flex;
-        flex-direction: row;
-        gap: 0.2ch;
-        align-items: center;
-        color: var(--link-btn-fg);
-        text-decoration: none;
-    }
+<style lang="scss">
+	@use "$lib/styles/color.scss";
 
-    .label {
-        padding: 0.2em;
-        border-radius: 0.2rem;
-        background-color: var(--link-btn-bg);
-    }
-</style> -->
+	a {
+		display: inline-block;
+		padding: 0.3rem;
+		border-radius: 0.2rem;
+		background: color.$gray-3;
+		color: color.$white;
+		text-decoration: none;
+		line-height: 1;
+		word-break: break-all;
+
+		transition: background 150ms ease-out;
+
+		&:hover {
+			background: color.$gray-4;
+		}
+	}
+</style>
