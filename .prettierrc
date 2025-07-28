@@ -1,8 +1,22 @@
 {
-	"useTabs": true,
-	"singleQuote": true,
-	"trailingComma": "none",
 	"printWidth": 100,
+	"useTabs": true,
+	"semi": true,
+	"singleQuote": false,
+	"quoteProps": "consistent",
+	"trailingComma": "all",
+	"bracketSpacing": true,
+	"objectWrap": "preserve",
+	"bracketSameLine": true,
+	"arrowParens": "always",
+	"requirePragma": false,
+	"insertPragma": false,
+	"checkIgnorePragma": false,
+	"proseWrap": "preserve",
+	"htmlWhitespaceSensitivity": "css",
+	"embeddedLanguageFormatting": "auto",
+	"singleAttributePerLine": false,
+
 	"plugins": ["prettier-plugin-svelte"],
 	"overrides": [
 		{
